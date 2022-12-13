@@ -113,8 +113,8 @@ return [
     ],
     [
         'name' => 'Year',
-        'serialize' => Overblog\GraphQL\Bundle\ConfigurationSdlBundle\ASTConverter\CustomScalarNode::class.'::mustOverrideConfig',
-        'parseValue' => Overblog\GraphQL\Bundle\ConfigurationSdlBundle\ASTConverter\CustomScalarNode::class.'::mustOverrideConfig',
-        'parseLiteral' => Overblog\GraphQL\Bundle\ConfigurationSdlBundle\ASTConverter\CustomScalarNode::class.'::mustOverrideConfig',
+        'serialize' => Overblog\GraphQLConfigurationSdlBundle\ASTConverter\CustomScalarNode::class.'::mustOverrideConfig',
+        'parseValue' => Overblog\GraphQLConfigurationSdlBundle\ASTConverter\CustomScalarNode::class.'::mustOverrideConfig',
+        'parseLiteral' => Overblog\GraphQLConfigurationSdlBundle\ASTConverter\CustomScalarNode::class.'::mustOverrideConfig',
     ],
 ];

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationSdlBundle\DependencyInjection;
+namespace Overblog\GraphQLConfigurationSdlBundle\DependencyInjection;
 
 use ReflectionClass;
 use Symfony\Component\Config\FileLocator;

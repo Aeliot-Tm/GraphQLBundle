@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationSdlBundle;
+namespace Overblog\GraphQLConfigurationSdlBundle;
 
-use Overblog\GraphQL\Bundle\ConfigurationSdlBundle\DependencyInjection\OverblogGraphQLConfigurationSdlExtension;
+use Overblog\GraphQLConfigurationSdlBundle\DependencyInjection\OverblogGraphQLConfigurationSdlExtension;
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

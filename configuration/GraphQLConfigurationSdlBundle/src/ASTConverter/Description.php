@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationSdlBundle\ASTConverter;
+namespace Overblog\GraphQLConfigurationSdlBundle\ASTConverter;
 
 use GraphQL\Language\AST\Node;
 use GraphQL\Language\AST\StringValueNode;

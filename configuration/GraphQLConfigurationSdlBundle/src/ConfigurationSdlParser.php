@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationSdlBundle;
+namespace Overblog\GraphQLConfigurationSdlBundle;
 
 use Exception;
 use GraphQL\Language\AST\DefinitionNode;

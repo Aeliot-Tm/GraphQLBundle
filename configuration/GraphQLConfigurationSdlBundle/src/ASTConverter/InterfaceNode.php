@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationSdlBundle\ASTConverter;
+namespace Overblog\GraphQLConfigurationSdlBundle\ASTConverter;
 
 final class InterfaceNode extends ObjectNode
 {

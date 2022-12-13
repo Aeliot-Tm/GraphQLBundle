@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationSdlBundle\Tests;
+namespace Overblog\GraphQLConfigurationSdlBundle\Tests;
 
 use Exception;
-use Overblog\GraphQL\Bundle\ConfigurationSdlBundle\ASTConverter\CustomScalarNode;
-use Overblog\GraphQL\Bundle\ConfigurationSdlBundle\ConfigurationSdlParser;
+use Overblog\GraphQLConfigurationSdlBundle\ASTConverter\CustomScalarNode;
+use Overblog\GraphQLConfigurationSdlBundle\ConfigurationSdlParser;
 use Overblog\GraphQLBundle\Configuration\TypeConfiguration;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;

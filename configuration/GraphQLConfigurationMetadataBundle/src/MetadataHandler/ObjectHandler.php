@@ -249,7 +249,11 @@ class ObjectHandler extends MetadataHandler
             ->setOrigin($this->getOrigin($reflector));
 
         /** @var Metadata\Arg[] $argAnnotations */
-        $argAnnotations = array_merge($this->getMetadataMatching($metadatas, Metadata\Arg::class), $fieldMetadata->args);
+        $argAnnotations = $this->getMetadataMatching($metadatas, Metadata\Arg::class);
+        /**  handle legacy args TODO: remove */
+        if (isset($fieldMetadata->args)) {
+            $argAnnotations = array_merge($argAnnotations, $fieldMetadata->args);
+        }
         $arguments = [];
         foreach ($argAnnotations as $arg) {
             $argConfiguration = ArgumentConfiguration::create($arg->name, $arg->type)
@@ -291,8 +295,8 @@ class ObjectHandler extends MetadataHandler
             $fieldConfiguration->setComplexity($fieldMetadata->complexity);
         }
 
-        /**  handle legacy args builders */
-        if ($fieldMetadata->argsBuilder) {
+        /**  handle legacy args builders TODO: remove */
+        if (isset($fieldMetadata->argsBuilder) && $fieldMetadata->argsBuilder) {
             if (is_array($fieldMetadata->argsBuilder) || is_string($fieldMetadata->argsBuilder)) {
                 $builderConfiguration = [
                     'name' => is_string($fieldMetadata->argsBuilder) ? $fieldMetadata->argsBuilder : $fieldMetadata->argsBuilder[0],
@@ -303,8 +307,8 @@ class ObjectHandler extends MetadataHandler
                 throw new MetadataConfigurationException(sprintf('The attribute "argsBuilder" on metadata %s defined on "%s" must be a string or an array where first index is the builder name and the second is the config.', $this->formatMetadata($fieldMetadataName), $reflector->getName()));
             }
         }
-        /** handle legacy field builders */
-        if ($fieldMetadata->fieldBuilder) {
+        /** handle legacy field builders TODO: remove */
+        if (isset($fieldMetadata->fieldBuilder) && $fieldMetadata->fieldBuilder) {
             if (is_array($fieldMetadata->fieldBuilder) || is_string($fieldMetadata->fieldBuilder)) {
                 $builderConfiguration = [
                     'name' => is_string($fieldMetadata->fieldBuilder) ? $fieldMetadata->fieldBuilder : $fieldMetadata->fieldBuilder[0],

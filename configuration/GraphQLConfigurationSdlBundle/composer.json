@@ -34,6 +34,13 @@
     }
   },
   "license": "MIT",
+  "extra": {
+    "branch-alias": {
+      "dev-dynamic_config_parsing": "dev-master"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "scripts": {
     "test": "vendor/bin/phpunit --color=always -v --debug",
     "static-analysis": [

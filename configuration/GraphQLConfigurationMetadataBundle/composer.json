@@ -38,6 +38,13 @@
       "Overblog\\GraphQLConfigurationMetadataBundle\\Tests\\": "tests/"
     }
   },
+  "extra": {
+    "branch-alias": {
+      "dev-dynamic_config_parsing": "dev-master"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "license": "MIT",
   "scripts": {
     "test": "vendor/bin/phpunit --color=always -v --debug",

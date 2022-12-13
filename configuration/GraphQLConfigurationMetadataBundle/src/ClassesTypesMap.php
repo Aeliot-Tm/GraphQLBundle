@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle;
+namespace Overblog\GraphQLConfigurationMetadataBundle;
 
 use Symfony\Contracts\Cache\CacheInterface;
 

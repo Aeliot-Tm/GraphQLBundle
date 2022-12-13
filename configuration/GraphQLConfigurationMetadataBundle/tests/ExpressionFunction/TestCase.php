@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\ExpressionFunction;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\ExpressionFunction;
 
 use Overblog\GraphQLBundle\Definition\GraphQLServices;
 use Overblog\GraphQLBundle\ExpressionLanguage\ExpressionLanguage;

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\MetadataHandler;
+namespace Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler;
 
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\MetadataConfigurationException;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\TypeGuessingException;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata;
+use Overblog\GraphQLConfigurationMetadataBundle\MetadataConfigurationException;
+use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\TypeGuessingException;
 use Overblog\GraphQLBundle\Configuration\ArgumentConfiguration;
 use Overblog\GraphQLBundle\Configuration\Configuration;
 use Overblog\GraphQLBundle\Configuration\ExtensionConfiguration;

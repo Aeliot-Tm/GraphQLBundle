@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata\Relay;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Metadata\Relay;
 
 use Attribute;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata\Type;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata\Type;
 
 /**
  * Annotation for GraphQL relay connection.

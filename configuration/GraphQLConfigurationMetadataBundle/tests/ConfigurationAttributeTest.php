@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests;
 
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Reader\AttributeReader;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Reader\MetadataReaderInterface;
+use Overblog\GraphQLConfigurationMetadataBundle\Reader\AttributeReader;
+use Overblog\GraphQLConfigurationMetadataBundle\Reader\MetadataReaderInterface;
 
 /**
  * @requires PHP 8.

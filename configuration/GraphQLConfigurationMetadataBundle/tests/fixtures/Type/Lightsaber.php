@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Type;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Type;
 
 use Doctrine\ORM\Mapping as ORM;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata as GQL;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata as GQL;
 
 /**
  * @GQL\Type

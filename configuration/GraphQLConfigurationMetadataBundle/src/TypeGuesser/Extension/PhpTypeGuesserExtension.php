@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\Extension;
+namespace Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\Extension;
 
 abstract class PhpTypeGuesserExtension extends TypeGuesserExtension
 {

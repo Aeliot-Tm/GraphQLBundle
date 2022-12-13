@@ -1,26 +1,26 @@
 parameters: ~
 
 services:
-    overblog_graphql.arguments_transformer: '@Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Transformer\ArgumentsTransformer'
+    overblog_graphql.arguments_transformer: '@Overblog\GraphQLConfigurationMetadataBundle\Transformer\ArgumentsTransformer'
 
-    Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\ConfigurationMetadataParser:
+    Overblog\GraphQLConfigurationMetadataBundle\ConfigurationMetadataParser:
         arguments:
             - "@overblog_graphql.metadata.reader"
-            - '@Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\ClassesTypesMap'
+            - '@Overblog\GraphQLConfigurationMetadataBundle\ClassesTypesMap'
             - !tagged_iterator { tag: "overblog_graphql.metadata.handler", index_by: "annotationClass" }
             - "%graphql.configuration.directories.metadata%"
         tags:
             - { name: "overblog_graphql.configuration.provider" }
 
-    Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\ClassesTypesMap:
+    Overblog\GraphQLConfigurationMetadataBundle\ClassesTypesMap:
         public: true
         arguments:
             - '@Symfony\Contracts\Cache\CacheInterface'
 
-    Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Transformer\ArgumentsTransformer:
+    Overblog\GraphQLConfigurationMetadataBundle\Transformer\ArgumentsTransformer:
         arguments:
             - "@?validator"
-            - '@Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\ClassesTypesMap'
+            - '@Overblog\GraphQLConfigurationMetadataBundle\ClassesTypesMap'
 
-    Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\ExpressionFunction\Arguments:
+    Overblog\GraphQLConfigurationMetadataBundle\ExpressionFunction\Arguments:
         tags: ["overblog_graphql.expression_function"]

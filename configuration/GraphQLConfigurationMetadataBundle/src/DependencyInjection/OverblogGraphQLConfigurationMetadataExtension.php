@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\DependencyInjection;
+namespace Overblog\GraphQLConfigurationMetadataBundle\DependencyInjection;
 
 use ReflectionClass;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
@@ -20,14 +20,14 @@ class OverblogGraphQLConfigurationMetadataExtension extends Extension
 
         switch ($config['reader']) {
             case Configuration::READER_ANNOTATION:
-                $readerService = 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Reader\AnnotationReader';
+                $readerService = 'Overblog\GraphQLConfigurationMetadataBundle\Reader\AnnotationReader';
                 break;
             case Configuration::READER_ATTRIBUTE:
                 if (PHP_VERSION_ID < 80000) {
                     throw new InvalidConfigurationException('The attribute metadata reader is only available with PHP >= 8.0.');
                 }
 
-                $readerService = 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Reader\AttributeReader';
+                $readerService = 'Overblog\GraphQLConfigurationMetadataBundle\Reader\AttributeReader';
                 break;
             default:
                 throw new InvalidConfigurationException(sprintf('Invalid attribute metadata reader %s', $config['reader']));

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Transformer;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer;
 
 final class InputType3
 {

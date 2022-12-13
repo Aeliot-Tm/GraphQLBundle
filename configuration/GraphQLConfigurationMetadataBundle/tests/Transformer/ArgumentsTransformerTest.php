@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Transformer;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer;
 
 use Exception;
 use Generator;
@@ -14,10 +14,10 @@ use GraphQL\Type\Definition\Type;
 use GraphQL\Type\Schema;
 // TODO check merge conflict solving
 use Overblog\GraphQLBundle\Definition\Type\PhpEnumType;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\ClassesTypesMap;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Transformer\ArgumentsTransformer;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Transformer\InvalidArgumentError;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Transformer\InvalidArgumentsError;
+use Overblog\GraphQLConfigurationMetadataBundle\ClassesTypesMap;
+use Overblog\GraphQLConfigurationMetadataBundle\Transformer\ArgumentsTransformer;
+use Overblog\GraphQLConfigurationMetadataBundle\Transformer\InvalidArgumentError;
+use Overblog\GraphQLConfigurationMetadataBundle\Transformer\InvalidArgumentsError;
 use Overblog\GraphQLBundle\Tests\Functional\EnumPhp\EnumPhp;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Validator\ConstraintViolation;
@@ -174,9 +174,9 @@ final class ArgumentsTransformerTest extends TestCase
         $this->assertEquals(2, $res);
 
         $transformer = $this->getTransformer([
-            'InputType1' => ['type' => 'input', 'class' => 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Transformer\InputType1'],
-            'InputType2' => ['type' => 'input', 'class' => 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Transformer\InputType2'],
-            'Enum1' => ['type' => 'enum', 'class' => 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Transformer\Enum1'],
+            'InputType1' => ['type' => 'input', 'class' => 'Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\InputType1'],
+            'InputType2' => ['type' => 'input', 'class' => 'Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\InputType2'],
+            'Enum1' => ['type' => 'enum', 'class' => 'Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\Enum1'],
         ]);
 
         $res = $transformer->getInstanceAndValidate('Enum1', 2, $info, 'enum1');
@@ -219,8 +219,8 @@ final class ArgumentsTransformerTest extends TestCase
     {
         $violation = new ConstraintViolation('validation_error', 'validation_error', [], 'invalid', 'field2', 'invalid');
         $builder = $this->getTransformer([
-            'InputType1' => ['type' => 'input', 'class' => 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Transformer\InputType1'],
-            'InputType2' => ['type' => 'input', 'class' => 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Transformer\InputType2'],
+            'InputType1' => ['type' => 'input', 'class' => 'Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\InputType1'],
+            'InputType2' => ['type' => 'input', 'class' => 'Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\InputType2'],
         ], new ConstraintViolationList([$violation]));
 
         $mapping = ['input1' => 'InputType1', 'input2' => 'InputType2'];
@@ -284,8 +284,8 @@ final class ArgumentsTransformerTest extends TestCase
             new ConstraintViolationList([$violation2])
         );
         $builder = new ArgumentsTransformer($validator, new ClassesTypesMap(null, [
-            'InputType1' => ['type' => 'input', 'class' => 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Transformer\InputType1'],
-            'InputType2' => ['type' => 'input', 'class' => 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Transformer\InputType2'],
+            'InputType1' => ['type' => 'input', 'class' => 'Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\InputType1'],
+            'InputType2' => ['type' => 'input', 'class' => 'Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\InputType2'],
         ]));
 
         $mapping = ['input1' => '[InputType1]', 'input2' => '[InputType2]'];
@@ -296,7 +296,7 @@ final class ArgumentsTransformerTest extends TestCase
 
         try {
             $builder->getArguments($mapping, $data, $this->getResolveInfo(self::getTypes()));
-            $this->fail("When input data validation fail, it should raise an Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Transformer\InvalidArgumentsError exception");
+            $this->fail("When input data validation fail, it should raise an Overblog\GraphQLConfigurationMetadataBundle\Transformer\InvalidArgumentsError exception");
         } catch (Exception $e) {
             $this->assertInstanceOf(InvalidArgumentsError::class, $e);
             /** @var InvalidArgumentsError $e */

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\ExpressionFunction;
+namespace Overblog\GraphQLConfigurationMetadataBundle\ExpressionFunction;
 
 use Overblog\GraphQLBundle\ExpressionLanguage\ExpressionFunction;
 use Overblog\GraphQLBundle\Generator\TypeGenerator;

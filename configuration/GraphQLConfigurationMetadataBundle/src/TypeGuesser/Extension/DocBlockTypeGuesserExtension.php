@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\Extension;
+namespace Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\Extension;
 
 use Exception;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\TypeGuessingException;
+use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\TypeGuessingException;
 use phpDocumentor\Reflection\DocBlock\Tags\TagWithType;
 use phpDocumentor\Reflection\DocBlockFactory;
 use phpDocumentor\Reflection\Type;

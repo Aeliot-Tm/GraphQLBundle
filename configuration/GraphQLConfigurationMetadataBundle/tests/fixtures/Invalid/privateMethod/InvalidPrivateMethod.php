@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Invalid\privateMethod;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Invalid\privateMethod;
 
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata as GQL;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata as GQL;
 
 /**
  * @GQL\Type

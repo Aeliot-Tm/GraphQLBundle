@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Scalar;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Scalar;
 
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata as GQL;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata as GQL;
 
 /**
  * @GQL\Scalar(name="MyScalar", scalarType="newObject('App\Type\EmailType')")

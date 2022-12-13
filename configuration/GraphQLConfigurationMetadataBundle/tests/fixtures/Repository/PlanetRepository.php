@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Repository;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Repository;
 
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata as GQL;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Type\Planet;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata as GQL;
+use Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Type\Planet;
 
 /**
  * @GQL\Provider(prefix="planet_")

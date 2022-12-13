@@ -2,27 +2,27 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests;
 
 use ArrayIterator;
 use Exception;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\ClassesTypesMap;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\ConfigurationMetadataParser;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\MetadataConfigurationException;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\MetadataHandler\EnumHandler;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\MetadataHandler\InputHandler;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\MetadataHandler\InterfaceHandler;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\MetadataHandler\ObjectHandler;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\MetadataHandler\RelayConnectionHandler;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\MetadataHandler\RelayEdgeHandler;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\MetadataHandler\ScalarHandler;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\MetadataHandler\UnionHandler;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Reader\MetadataReaderInterface;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\Extension\DocBlockTypeGuesserExtension;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\Extension\DoctrineTypeGuesserExtension;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\Extension\TypeHintTypeGuesserExtension;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\TypeGuesser;
+use Overblog\GraphQLConfigurationMetadataBundle\ClassesTypesMap;
+use Overblog\GraphQLConfigurationMetadataBundle\ConfigurationMetadataParser;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata;
+use Overblog\GraphQLConfigurationMetadataBundle\MetadataConfigurationException;
+use Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler\EnumHandler;
+use Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler\InputHandler;
+use Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler\InterfaceHandler;
+use Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler\ObjectHandler;
+use Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler\RelayConnectionHandler;
+use Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler\RelayEdgeHandler;
+use Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler\ScalarHandler;
+use Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler\UnionHandler;
+use Overblog\GraphQLConfigurationMetadataBundle\Reader\MetadataReaderInterface;
+use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\Extension\DocBlockTypeGuesserExtension;
+use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\Extension\DoctrineTypeGuesserExtension;
+use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\Extension\TypeHintTypeGuesserExtension;
+use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\TypeGuesser;
 use Overblog\GraphQLBundle\Configuration\Configuration;
 use Overblog\GraphQLBundle\Configuration\EnumConfiguration;
 use Overblog\GraphQLBundle\Configuration\InputConfiguration;
@@ -196,7 +196,7 @@ abstract class ConfigurationMetadataTest extends WebTestCase
                 [
                     'name' => 'planet_allowedPlanets',
                     'type' => '[Planet]',
-                    'resolve' => '@=call(service(\'Overblog\\\\GraphQL\\\\Bundle\\\\ConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository\').getAllowedPlanetsForDroids, arguments({}, args))',
+                    'resolve' => '@=call(service(\'Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository\').getAllowedPlanetsForDroids, arguments({}, args))',
                     'extensions' => [
                         ['alias' => 'access', 'configuration' => 'override_access'],
                         ['alias' => 'public', 'configuration' => 'default_public'],
@@ -205,7 +205,7 @@ abstract class ConfigurationMetadataTest extends WebTestCase
                 [
                     'name' => 'planet_armorResistance',
                     'type' => 'Int!',
-                    'resolve' => '@=call(service(\'Overblog\\\\GraphQL\\\\Bundle\\\\ConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository\').getArmorResistance, arguments({}, args))',
+                    'resolve' => '@=call(service(\'Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository\').getArmorResistance, arguments({}, args))',
                     'extensions' => [
                         ['alias' => 'access', 'configuration' => 'default_access'],
                         ['alias' => 'public', 'configuration' => 'default_public'],
@@ -390,7 +390,7 @@ abstract class ConfigurationMetadataTest extends WebTestCase
         $this->assertEquals([
             'name' => 'SearchResult2',
             'types' => ['Hero', 'Droid', 'Sith'],
-            'resolveType' => "@=call('Overblog\\\\GraphQL\\\\Bundle\\\\ConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Union\\\\SearchResult2::resolveType', [service('overblog_graphql.type_resolver'), value], true)",
+            'resolveType' => "@=call('Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Union\\\\SearchResult2::resolveType', [service('overblog_graphql.type_resolver'), value], true)",
         ], $union->toArray());
     }
 
@@ -421,7 +421,7 @@ abstract class ConfigurationMetadataTest extends WebTestCase
                 [
                     'name' => 'planet_armorResistance',
                     'type' => 'Int!',
-                    'resolve' => '@=call(service(\'Overblog\\\\GraphQL\\\\Bundle\\\\ConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository\').getArmorResistance, arguments({}, args))',
+                    'resolve' => '@=call(service(\'Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository\').getArmorResistance, arguments({}, args))',
                     'extensions' => [
                         ['alias' => 'access', 'configuration' => 'default_access'],
                         ['alias' => 'public', 'configuration' => 'default_public'],
@@ -436,9 +436,9 @@ abstract class ConfigurationMetadataTest extends WebTestCase
         $scalar = $this->getType('GalaxyCoordinates', ScalarConfiguration::class);
         $this->assertEquals([
             'name' => 'GalaxyCoordinates',
-            'serialize' => 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Scalar\GalaxyCoordinates::serialize',
-            'parseValue' => 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Scalar\GalaxyCoordinates::parseValue',
-            'parseLiteral' => 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Scalar\GalaxyCoordinates::parseLiteral',
+            'serialize' => 'Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Scalar\GalaxyCoordinates::serialize',
+            'parseValue' => 'Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Scalar\GalaxyCoordinates::parseValue',
+            'parseLiteral' => 'Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Scalar\GalaxyCoordinates::parseLiteral',
             'description' => 'The galaxy coordinates scalar',
         ], $scalar->toArray());
 
@@ -464,13 +464,13 @@ abstract class ConfigurationMetadataTest extends WebTestCase
                 [
                     'name' => 'countSecretWeapons',
                     'type' => 'Int!',
-                    'resolve' => "@=call(service('Overblog\\\\GraphQL\\\\Bundle\\\\ConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\WeaponRepository').countSecretWeapons, arguments({}, args))",
+                    'resolve' => "@=call(service('Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\WeaponRepository').countSecretWeapons, arguments({}, args))",
                 ],
                 [
                     'name' => 'planet_searchPlanet',
                     'type' => '[Planet]',
                     'arguments' => [['name' => 'keyword', 'type' => 'String!']],
-                    'resolve' => "@=call(service('Overblog\\\\GraphQL\\\\Bundle\\\\ConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').searchPlanet, arguments({keyword: \"String!\"}, args))",
+                    'resolve' => "@=call(service('Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').searchPlanet, arguments({keyword: \"String!\"}, args))",
                     'extensions' => [
                         ['alias' => 'access', 'configuration' => 'default_access'],
                         ['alias' => 'public', 'configuration' => 'default_public'],
@@ -480,7 +480,7 @@ abstract class ConfigurationMetadataTest extends WebTestCase
                     'name' => 'planet_searchStar',
                     'type' => '[Planet]',
                     'arguments' => [['name' => 'distance', 'type' => 'Int!']],
-                    'resolve' => "@=call(service('Overblog\\\\GraphQL\\\\Bundle\\\\ConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').searchStar, arguments({distance: \"Int!\"}, args))",
+                    'resolve' => "@=call(service('Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').searchStar, arguments({distance: \"Int!\"}, args))",
                     'extensions' => [
                         ['alias' => 'access', 'configuration' => 'default_access'],
                         ['alias' => 'public', 'configuration' => 'default_public'],
@@ -490,7 +490,7 @@ abstract class ConfigurationMetadataTest extends WebTestCase
                     'name' => 'planet_isPlanetDestroyed',
                     'type' => 'Boolean!',
                     'arguments' => [['name' => 'planetId', 'type' => 'Int!']],
-                    'resolve' => "@=call(service('Overblog\\\\GraphQL\\\\Bundle\\\\ConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').isPlanetDestroyed, arguments({planetId: \"Int!\"}, args))",
+                    'resolve' => "@=call(service('Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').isPlanetDestroyed, arguments({planetId: \"Int!\"}, args))",
                     'extensions' => [
                         ['alias' => 'access', 'configuration' => 'default_access'],
                         ['alias' => 'public', 'configuration' => 'default_public'],
@@ -510,7 +510,7 @@ abstract class ConfigurationMetadataTest extends WebTestCase
                     'name' => 'planet_createPlanet',
                     'type' => 'Planet',
                     'arguments' => [['name' => 'planetInput', 'type' => 'PlanetInput!']],
-                    'resolve' => "@=call(service('Overblog\\\\GraphQL\\\\Bundle\\\\ConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').createPlanet, arguments({planetInput: \"PlanetInput!\"}, args))",
+                    'resolve' => "@=call(service('Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').createPlanet, arguments({planetInput: \"PlanetInput!\"}, args))",
                     'extensions' => [
                         ['alias' => 'public', 'configuration' => 'override_public'],
                         ['alias' => 'access', 'configuration' => 'default_access'],
@@ -520,7 +520,7 @@ abstract class ConfigurationMetadataTest extends WebTestCase
                     'name' => 'planet_destroyPlanet',
                     'type' => 'Boolean!',
                     'arguments' => [['name' => 'planetId', 'type' => 'Int!']],
-                    'resolve' => "@=call(service('Overblog\\\\GraphQL\\\\Bundle\\\\ConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').destroyPlanet, arguments({planetId: \"Int!\"}, args))",
+                    'resolve' => "@=call(service('Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').destroyPlanet, arguments({planetId: \"Int!\"}, args))",
                     'extensions' => [
                         ['alias' => 'access', 'configuration' => 'default_access'],
                         ['alias' => 'public', 'configuration' => 'default_public'],
@@ -539,12 +539,12 @@ abstract class ConfigurationMetadataTest extends WebTestCase
                 [
                     'name' => 'hasSecretWeapons',
                     'type' => 'Boolean!',
-                    'resolve' => "@=call(service('Overblog\\\\GraphQL\\\\Bundle\\\\ConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\WeaponRepository').hasSecretWeapons, arguments({}, args))",
+                    'resolve' => "@=call(service('Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\WeaponRepository').hasSecretWeapons, arguments({}, args))",
                 ],
                 [
                     'name' => 'planet_getPlanetSchema2',
                     'type' => 'Planet',
-                    'resolve' => "@=call(service('Overblog\\\\GraphQL\\\\Bundle\\\\ConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').getPlanetSchema2, arguments({}, args))",
+                    'resolve' => "@=call(service('Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').getPlanetSchema2, arguments({}, args))",
                     'extensions' => [
                         ['alias' => 'access', 'configuration' => 'default_access'],
                         ['alias' => 'public', 'configuration' => 'default_public'],
@@ -554,7 +554,7 @@ abstract class ConfigurationMetadataTest extends WebTestCase
                     'name' => 'planet_isPlanetDestroyed',
                     'type' => 'Boolean!',
                     'arguments' => [['name' => 'planetId', 'type' => 'Int!']],
-                    'resolve' => "@=call(service('Overblog\\\\GraphQL\\\\Bundle\\\\ConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').isPlanetDestroyed, arguments({planetId: \"Int!\"}, args))",
+                    'resolve' => "@=call(service('Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').isPlanetDestroyed, arguments({planetId: \"Int!\"}, args))",
                     'extensions' => [
                         ['alias' => 'access', 'configuration' => 'default_access'],
                         ['alias' => 'public', 'configuration' => 'default_public'],
@@ -570,13 +570,13 @@ abstract class ConfigurationMetadataTest extends WebTestCase
                 [
                     'name' => 'createLightsaber',
                     'type' => 'Boolean!',
-                    'resolve' => "@=call(service('Overblog\\\\GraphQL\\\\Bundle\\\\ConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\WeaponRepository').createLightsaber, arguments({}, args))",
+                    'resolve' => "@=call(service('Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\WeaponRepository').createLightsaber, arguments({}, args))",
                 ],
                 [
                     'name' => 'planet_createPlanetSchema2',
                     'type' => 'Planet',
                     'arguments' => [['name' => 'planetInput', 'type' => 'PlanetInput!']],
-                    'resolve' => "@=call(service('Overblog\\\\GraphQL\\\\Bundle\\\\ConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').createPlanetSchema2, arguments({planetInput: \"PlanetInput!\"}, args))",
+                    'resolve' => "@=call(service('Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').createPlanetSchema2, arguments({planetInput: \"PlanetInput!\"}, args))",
                     'extensions' => [
                         ['alias' => 'public', 'configuration' => 'override_public'],
                         ['alias' => 'access', 'configuration' => 'default_access'],
@@ -586,7 +586,7 @@ abstract class ConfigurationMetadataTest extends WebTestCase
                     'name' => 'planet_destroyPlanet',
                     'type' => 'Boolean!',
                     'arguments' => [['name' => 'planetId', 'type' => 'Int!']],
-                    'resolve' => "@=call(service('Overblog\\\\GraphQL\\\\Bundle\\\\ConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').destroyPlanet, arguments({planetId: \"Int!\"}, args))",
+                    'resolve' => "@=call(service('Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Repository\\\\PlanetRepository').destroyPlanet, arguments({planetId: \"Int!\"}, args))",
                     'extensions' => [
                         ['alias' => 'access', 'configuration' => 'default_access'],
                         ['alias' => 'public', 'configuration' => 'default_public'],

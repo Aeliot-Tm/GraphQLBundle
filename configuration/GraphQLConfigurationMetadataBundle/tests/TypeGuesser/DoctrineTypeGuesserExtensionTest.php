@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\TypeGuesser;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\TypeGuesser;
 
 use Exception;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\ClassesTypesMap;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Guesser\Doctrine\LightsaberAnnotations;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Guesser\Doctrine\LightsaberAttributes;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\Extension\DoctrineTypeGuesserExtension;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\TypeGuessingException;
+use Overblog\GraphQLConfigurationMetadataBundle\ClassesTypesMap;
+use Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Guesser\Doctrine\LightsaberAnnotations;
+use Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Guesser\Doctrine\LightsaberAttributes;
+use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\Extension\DoctrineTypeGuesserExtension;
+use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\TypeGuessingException;
 use ReflectionClass;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
@@ -42,9 +42,9 @@ class DoctrineTypeGuesserExtensionTest extends WebTestCase
     protected function testGuessClass(string $className): void
     {
         $classesMap = [
-            'Hero' => ['class' => 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Guesser\Doctrine\Hero', 'type' => 'object'],
-            'Crystal' => ['class' => 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Guesser\Doctrine\Crystal', 'type' => 'object'],
-            'Battle' => ['class' => 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Guesser\Doctrine\Battle', 'type' => 'object'],
+            'Hero' => ['class' => 'Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Guesser\Doctrine\Hero', 'type' => 'object'],
+            'Crystal' => ['class' => 'Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Guesser\Doctrine\Crystal', 'type' => 'object'],
+            'Battle' => ['class' => 'Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Guesser\Doctrine\Battle', 'type' => 'object'],
         ];
 
         $doctrineMapping = [

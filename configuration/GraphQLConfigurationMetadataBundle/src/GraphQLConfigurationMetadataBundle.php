@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle;
+namespace Overblog\GraphQLConfigurationMetadataBundle;
 
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\DependencyInjection\OverblogGraphQLConfigurationMetadataExtension;
+use Overblog\GraphQLConfigurationMetadataBundle\DependencyInjection\OverblogGraphQLConfigurationMetadataExtension;
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

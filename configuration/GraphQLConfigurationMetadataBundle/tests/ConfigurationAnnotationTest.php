@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests;
 
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Reader\AnnotationReader;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Reader\MetadataReaderInterface;
+use Overblog\GraphQLConfigurationMetadataBundle\Reader\AnnotationReader;
+use Overblog\GraphQLConfigurationMetadataBundle\Reader\MetadataReaderInterface;
 
 class ConfigurationAnnotationTest extends ConfigurationMetadataTest
 {

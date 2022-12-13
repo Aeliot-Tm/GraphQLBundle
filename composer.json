@@ -18,7 +18,7 @@
     "autoload-dev": {
         "psr-4": {
             "Overblog\\GraphQLBundle\\Tests\\": "tests/",
-            "Overblog\\GraphQL\\Bundle\\ConfigurationMetadataBundle\\Tests\\": "configuration/GraphQLConfigurationMetadataBundle/tests/",
+            "Overblog\\GraphQLConfigurationMetadataBundle\\Tests\\": "configuration/GraphQLConfigurationMetadataBundle/tests/",
             "Overblog\\GraphQL\\Bundle\\GraphQLConfigurationSdlBundle\\Tests\\": "configuration/GraphQLConfigurationSdlBundle/tests/",
             "Overblog\\GraphQL\\Bundle\\GraphQLConfigurationYamlBundle\\Tests\\": "configuration/GraphQLConfigurationYamlBundle/tests/"
         }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Reader;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Reader;
 
 use ReflectionAttribute;
 use ReflectionClass;

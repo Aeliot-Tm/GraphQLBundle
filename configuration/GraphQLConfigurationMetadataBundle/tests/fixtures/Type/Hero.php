@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Type;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Type;
 
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata as GQL;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Enum\Race;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Union\Killable;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata as GQL;
+use Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Enum\Race;
+use Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Union\Killable;
 
 /**
  * @GQL\Type(interfaces={"Character"})

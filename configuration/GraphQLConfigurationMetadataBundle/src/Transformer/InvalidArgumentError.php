@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Transformer;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Transformer;
 
 use Exception;
 use GraphQL\Error\UserError as GraphQLUserError;

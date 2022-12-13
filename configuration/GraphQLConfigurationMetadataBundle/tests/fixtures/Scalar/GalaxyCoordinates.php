@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Scalar;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Scalar;
 
 use DateTimeInterface;
 use GraphQL\Language\AST\Node;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata as GQL;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata as GQL;
 
 use function explode;
 use function implode;

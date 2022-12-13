@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\Extension;
+namespace Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\Extension;
 
 use Doctrine\ORM\Mapping\Annotation as MappingAnnotation;
 use Doctrine\ORM\Mapping\Column;
@@ -11,10 +11,10 @@ use Doctrine\ORM\Mapping\ManyToMany;
 use Doctrine\ORM\Mapping\ManyToOne;
 use Doctrine\ORM\Mapping\OneToMany;
 use Doctrine\ORM\Mapping\OneToOne;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Reader\AnnotationReader;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Reader\AttributeReader;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\ClassesTypesMap;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\TypeGuessingException;
+use Overblog\GraphQLConfigurationMetadataBundle\Reader\AnnotationReader;
+use Overblog\GraphQLConfigurationMetadataBundle\Reader\AttributeReader;
+use Overblog\GraphQLConfigurationMetadataBundle\ClassesTypesMap;
+use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\TypeGuessingException;
 use Overblog\GraphQLBundle\Configuration\TypeConfiguration;
 use ReflectionClass;
 use ReflectionProperty;

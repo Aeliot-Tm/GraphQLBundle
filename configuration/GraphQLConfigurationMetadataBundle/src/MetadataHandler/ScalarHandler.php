@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\MetadataHandler;
+namespace Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler;
 
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata;
 use Overblog\GraphQLBundle\Configuration\Configuration;
 use Overblog\GraphQLBundle\Configuration\ScalarConfiguration;
 use Overblog\GraphQLBundle\Configuration\TypeConfiguration;

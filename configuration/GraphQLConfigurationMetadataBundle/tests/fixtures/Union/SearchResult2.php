@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Union;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Union;
 
 use GraphQL\Type\Definition\Type;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata as GQL;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata as GQL;
 use Overblog\GraphQLBundle\Resolver\TypeResolver;
 
 /**

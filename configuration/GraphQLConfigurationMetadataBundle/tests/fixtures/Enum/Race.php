@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\fixtures\Enum;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Enum;
 
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata as GQL;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Constants;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata as GQL;
+use Overblog\GraphQLConfigurationMetadataBundle\Tests\Constants;
 
 /**
  * @GQL\Enum

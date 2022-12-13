@@ -2,19 +2,19 @@ services:
     _defaults:
         autowire: true
 
-    Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\TypeGuesser:
+    Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\TypeGuesser:
         arguments:
             - !tagged_iterator 'overblog_graphql.metadata.type_guesser_extension'
 
-    Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\Extension\DocBlockTypeGuesserExtension:
+    Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\Extension\DocBlockTypeGuesserExtension:
         tags:
             - { name: 'overblog_graphql.metadata.type_guesser_extension', priority: 100 }
 
-    Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\Extension\TypeHintTypeGuesserExtension:
+    Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\Extension\TypeHintTypeGuesserExtension:
         tags:
             - { name: 'overblog_graphql.metadata.type_guesser_extension', priority: 50 }
 
-    Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\Extension\DoctrineTypeGuesserExtension:
+    Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\Extension\DoctrineTypeGuesserExtension:
         tags:
             - { name: 'overblog_graphql.metadata.type_guesser_extension', priority: 0 }
         arguments:

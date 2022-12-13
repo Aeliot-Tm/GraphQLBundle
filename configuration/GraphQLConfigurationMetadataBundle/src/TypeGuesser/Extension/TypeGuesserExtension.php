@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser\Extension;
+namespace Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\Extension;
 
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\ClassesTypesMap;
+use Overblog\GraphQLConfigurationMetadataBundle\ClassesTypesMap;
 use ReflectionClass;
 use Reflector;
 

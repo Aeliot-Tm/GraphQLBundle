@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\TypeGuesser;
+namespace Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser;
 
 use RuntimeException;
 

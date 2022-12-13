@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle;
+namespace Overblog\GraphQLConfigurationMetadataBundle;
 
 use Doctrine\Common\Annotations\Reader;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\MetadataHandler\MetadataHandler;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Reader\MetadataReaderInterface;
+use Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler\MetadataHandler;
+use Overblog\GraphQLConfigurationMetadataBundle\Reader\MetadataReaderInterface;
 use Overblog\GraphQLBundle\Configuration\Configuration;
 use Overblog\GraphQLBundle\ConfigurationProvider\ConfigurationFilesParser;
 use ReflectionClass;

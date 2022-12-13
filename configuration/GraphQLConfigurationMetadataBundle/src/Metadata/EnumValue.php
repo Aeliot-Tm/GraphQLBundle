@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Metadata;
 
 /**
  * Annotation for GraphQL enum value.

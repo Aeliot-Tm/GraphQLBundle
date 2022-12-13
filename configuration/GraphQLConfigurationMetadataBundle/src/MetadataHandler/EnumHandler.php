@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\MetadataHandler;
+namespace Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler;
 
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata\Enum;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata\Enum;
 use Overblog\GraphQLBundle\Configuration\Configuration;
 use Overblog\GraphQLBundle\Configuration\EnumConfiguration;
 use Overblog\GraphQLBundle\Configuration\EnumValueConfiguration;

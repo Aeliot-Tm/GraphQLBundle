@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\ExpressionFunction;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\ExpressionFunction;
 
 use GraphQL\Type\Definition\ResolveInfo;
 use GraphQL\Type\Schema;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\ClassesTypesMap;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\ExpressionFunction\Arguments;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Transformer\ArgumentsTransformerTest;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Transformer\Enum1;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Transformer\InputType1;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Transformer\InputType2;
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Transformer\ArgumentsTransformer;
+use Overblog\GraphQLConfigurationMetadataBundle\ClassesTypesMap;
+use Overblog\GraphQLConfigurationMetadataBundle\ExpressionFunction\Arguments;
+use Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\ArgumentsTransformerTest;
+use Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\Enum1;
+use Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\InputType1;
+use Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\InputType2;
+use Overblog\GraphQLConfigurationMetadataBundle\Transformer\ArgumentsTransformer;
 use Overblog\GraphQLBundle\Generator\TypeGenerator;
 use Symfony\Component\Validator\ConstraintViolationList;
 use Symfony\Component\Validator\Validation;
@@ -76,9 +76,9 @@ final class ArgumentsTest extends TestCase
 
         $transformer = $this->getTransformer(
             [
-                'InputType1' => ['type' => 'input', 'class' => 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Transformer\InputType1'],
-                'InputType2' => ['type' => 'input', 'class' => 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Transformer\InputType2'],
-                'Enum1' => ['type' => 'enum', 'class' => 'Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\Transformer\Enum1'],
+                'InputType1' => ['type' => 'input', 'class' => 'Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\InputType1'],
+                'InputType2' => ['type' => 'input', 'class' => 'Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\InputType2'],
+                'Enum1' => ['type' => 'enum', 'class' => 'Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\Enum1'],
             ]
         );
 

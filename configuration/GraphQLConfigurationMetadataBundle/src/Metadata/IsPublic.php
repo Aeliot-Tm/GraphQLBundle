@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Metadata;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Metadata;
 
 use Attribute;
 use Overblog\GraphQLBundle\Extension\IsPublic\IsPublicExtension;

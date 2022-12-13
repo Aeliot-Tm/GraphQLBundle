@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Overblog\GraphQLBundle\Tests\Functional\App;
 
-use Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\GraphQLConfigurationMetadataBundle;
+use Overblog\GraphQLConfigurationMetadataBundle\GraphQLConfigurationMetadataBundle;
 use Overblog\GraphQL\Bundle\ConfigurationSdlBundle\GraphQLConfigurationSdlBundle;
 use Overblog\GraphQL\Bundle\ConfigurationYamlBundle\GraphQLConfigurationYamlBundle;
 use Overblog\GraphQLBundle\OverblogGraphQLBundle;

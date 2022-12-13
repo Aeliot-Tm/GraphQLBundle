@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationMetadataBundle\Tests\ExpressionFunction;
+namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\ExpressionFunction;
 
 use PHPUnit_Framework_MockObject_MockBuilder;
 use Symfony\Component\DependencyInjection\Container;

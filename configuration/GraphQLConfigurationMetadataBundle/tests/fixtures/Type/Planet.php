@@ -53,18 +53,16 @@ final class Planet
     public Planet $closestPlanet;
 
     /**
-     * @GQL\Field(type="Builder", fieldBuilder={"NoteFieldBuilder", {"option1": "value1"}})
+     * @GQL\Field(type="Builder")
+     * @GQL\FieldBuilder(name="NoteFieldBuilder", configuration={"option1": "value1"})
      */
     #[GQL\Field(type: "Builder")]
     #[GQL\FieldBuilder("NoteFieldBuilder", ["option1" => "value1"])]
     public array $notesDeprecated;
 
     /**
-     * @GQL\Field(
-     *   type="Planet",
-     *   argsBuilder={"PlanetFilterArgBuilder", {"option2": "value2"}},
-     *   resolve="@=query('closest_planet', args['filter'])"
-     * )
+     * @GQL\Field(type="Planet", resolve="@=query('closest_planet', args['filter'])")
+     * @GQL\ArgsBuilder(name="PlanetFilterArgBuilder", configuration={"option2": "value2"})
      */
     #[GQL\Field(type: "Planet", resolve: "@=query('closest_planet', args['filter'])")]
     #[GQL\ArgsBuilder("PlanetFilterArgBuilder", ["option2" => "value2"])]

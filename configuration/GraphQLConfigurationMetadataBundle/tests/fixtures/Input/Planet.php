@@ -56,5 +56,6 @@ final class Planet
      * @ORM\Column(type="text[]")
      */
     #[GQL\InputField]
+    #[ORM\Column(type: "text[]")]
     public array $tags = [];
 }

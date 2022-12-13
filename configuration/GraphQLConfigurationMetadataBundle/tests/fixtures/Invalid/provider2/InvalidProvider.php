@@ -13,7 +13,7 @@ use Overblog\GraphQLConfigurationMetadataBundle\Metadata as GQL;
 class InvalidProvider
 {
     /**
-     * @GQL\Mutation(type="Int", targetType="RootQuery2")
+     * @GQL\Mutation(type="Int", targetTypes="RootQuery2")
      */
     #[GQL\Mutation(type: "Int", targetTypes: "RootQuery2")]
     public function noMutationOnQuery(): array

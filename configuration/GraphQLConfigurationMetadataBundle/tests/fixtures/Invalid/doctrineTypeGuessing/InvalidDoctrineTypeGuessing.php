@@ -20,5 +20,6 @@ final class InvalidDoctrineTypeGuessing
      * @var mixed
      */
     #[GQL\Field]
+    #[ORM\Column(type: "invalidType")]
     public $myRelation;
 }

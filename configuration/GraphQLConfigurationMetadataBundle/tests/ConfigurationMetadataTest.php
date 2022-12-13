@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Overblog\GraphQLConfigurationMetadataBundle\Tests;
 
 use ArrayIterator;
+use Doctrine\Common\Annotations\AnnotationReader as DoctrineAnnotationReader;
 use Exception;
 use Overblog\GraphQLConfigurationMetadataBundle\ClassesTypesMap;
 use Overblog\GraphQLConfigurationMetadataBundle\ConfigurationMetadataParser;
@@ -18,6 +19,8 @@ use Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler\RelayConnectionH
 use Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler\RelayEdgeHandler;
 use Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler\ScalarHandler;
 use Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler\UnionHandler;
+use Overblog\GraphQLConfigurationMetadataBundle\Reader\AnnotationReader;
+use Overblog\GraphQLConfigurationMetadataBundle\Reader\AttributeReader;
 use Overblog\GraphQLConfigurationMetadataBundle\Reader\MetadataReaderInterface;
 use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\Extension\DocBlockTypeGuesserExtension;
 use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\Extension\DoctrineTypeGuesserExtension;
@@ -70,17 +73,22 @@ abstract class ConfigurationMetadataTest extends WebTestCase
     protected function getConfiguration(array $includeDirectories = []): Configuration
     {
         $reader = $this->getMetadataReader();
-        $this->classesTypesMap = new ClassesTypesMap();
-        $this->typeGuesser = new TypeGuesser(new ArrayIterator([
-            new DocBlockTypeGuesserExtension($this->classesTypesMap),
-            new TypeHintTypeGuesserExtension($this->classesTypesMap),
-            new DoctrineTypeGuesserExtension($this->classesTypesMap, $this->doctrineMapping),
+        $classesTypesMap = new ClassesTypesMap();
+        $typeGuesser = new TypeGuesser(new ArrayIterator([
+            new DocBlockTypeGuesserExtension($classesTypesMap),
+            new TypeHintTypeGuesserExtension($classesTypesMap),
+            new DoctrineTypeGuesserExtension(
+                $classesTypesMap,
+                new AnnotationReader(new DoctrineAnnotationReader()),
+                new AttributeReader(),
+                $this->doctrineMapping,
+            ),
         ]));
 
         $resolverArgs = [
-            $this->classesTypesMap,
+            $classesTypesMap,
             $reader,
-            $this->typeGuesser,
+            $typeGuesser,
             $this->schemas,
         ];
         $objectHandler = new ObjectHandler(...$resolverArgs);
@@ -106,7 +114,7 @@ abstract class ConfigurationMetadataTest extends WebTestCase
         $directories = array_values(array_map(fn (SplFileInfo $dir) => $dir->getPathname(), iterator_to_array($finder->getIterator())));
         $directories = [...$directories, ...$includeDirectories];
 
-        $generator = new ConfigurationMetadataParser($reader, $this->classesTypesMap, $resolvers, $directories);
+        $generator = new ConfigurationMetadataParser($reader, $classesTypesMap, $resolvers, $directories);
 
         return $generator->getConfiguration();
     }

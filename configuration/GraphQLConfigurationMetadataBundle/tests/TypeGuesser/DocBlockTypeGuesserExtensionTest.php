@@ -27,7 +27,7 @@ final class DocBlockTypeGuesserExtensionTest extends WebTestCase
      */
     public function testGuessSuccess(string $docType, string $gqlType, ?ClassesTypesMap $map, ?string $reflectorClass): void
     {
-        $docBlockGuesser = new DocBlockTypeGuesser($map ?: new ClassesTypesMap());
+        $docBlockGuesser = new DocBlockTypeGuesserExtension($map ?: new ClassesTypesMap());
         $this->assertEquals(
             $gqlType,
             $docBlockGuesser->guessType(

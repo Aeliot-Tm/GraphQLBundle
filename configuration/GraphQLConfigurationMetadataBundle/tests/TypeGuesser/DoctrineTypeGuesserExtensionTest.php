@@ -4,8 +4,11 @@ declare(strict_types=1);
 
 namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\TypeGuesser;
 
+use Doctrine\Common\Annotations\AnnotationReader as DoctrineAnnotationReader;
 use Exception;
 use Overblog\GraphQLConfigurationMetadataBundle\ClassesTypesMap;
+use Overblog\GraphQLConfigurationMetadataBundle\Reader\AnnotationReader;
+use Overblog\GraphQLConfigurationMetadataBundle\Reader\AttributeReader;
 use Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Guesser\Doctrine\LightsaberAnnotations;
 use Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Guesser\Doctrine\LightsaberAttributes;
 use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\Extension\DoctrineTypeGuesserExtension;
@@ -21,7 +24,11 @@ class DoctrineTypeGuesserExtensionTest extends WebTestCase
     public function testGuessError(): void
     {
         $refClass = new ReflectionClass(__CLASS__);
-        $doctrineGuesser = new DoctrineTypeGuesserExtension(new ClassesTypesMap());
+        $doctrineGuesser = new DoctrineTypeGuesserExtension(
+            new ClassesTypesMap(),
+            new AnnotationReader(new DoctrineAnnotationReader()),
+            new AttributeReader(),
+        );
 
         try {
             // @phpstan-ignore-next-line
@@ -51,7 +58,12 @@ class DoctrineTypeGuesserExtensionTest extends WebTestCase
             'text[]' => ['[String]', '[String]!'],
         ];
 
-        $doctrineGuesser = new DoctrineTypeGuesserExtension(new ClassesTypesMap(null, $classesMap), $doctrineMapping);
+        $doctrineGuesser = new DoctrineTypeGuesserExtension(
+            new ClassesTypesMap(null, $classesMap),
+            new AnnotationReader(new DoctrineAnnotationReader()),
+            new AttributeReader(),
+            $doctrineMapping,
+        );
         $refClass = new ReflectionClass($className);
 
         $result = [];

@@ -465,8 +465,8 @@ abstract class ConfigurationMetadataTest extends WebTestCase
 
     public function testProviderRootQuery(): void
     {
-        $object = $this->getType('RootQuery', ObjectConfiguration::class);
-        $this->assertEquals([
+        $actual = $this->getType('RootQuery', ObjectConfiguration::class)->toArray();
+        $expected = [
             'name' => 'RootQuery',
             'fields' => [
                 [
@@ -505,7 +505,8 @@ abstract class ConfigurationMetadataTest extends WebTestCase
                     ],
                 ],
             ],
-        ], $object->toArray());
+        ];
+        $this->assertEquals($this->sortFields($expected), $this->sortFields($actual));
     }
 
     public function testProviderRootMutation(): void
@@ -540,8 +541,8 @@ abstract class ConfigurationMetadataTest extends WebTestCase
 
     public function testProvidersMultischema(): void
     {
-        $object = $this->getType('RootQuery2', ObjectConfiguration::class);
-        $this->assertEquals([
+        $actual = $this->getType('RootQuery2', ObjectConfiguration::class)->toArray();
+        $expected = [
             'name' => 'RootQuery2',
             'fields' => [
                 [
@@ -569,10 +570,11 @@ abstract class ConfigurationMetadataTest extends WebTestCase
                     ],
                 ],
             ],
-        ], $object->toArray());
+        ];
+        $this->assertEquals($this->sortFields($expected), $this->sortFields($actual));
 
-        $object = $this->getType('RootMutation2', ObjectConfiguration::class);
-        $this->assertEquals([
+        $actual = $this->getType('RootMutation2', ObjectConfiguration::class)->toArray();
+        $expected = [
             'name' => 'RootMutation2',
             'fields' => [
                 [
@@ -601,7 +603,8 @@ abstract class ConfigurationMetadataTest extends WebTestCase
                     ],
                 ],
             ],
-        ], $object->toArray());
+        ];
+        $this->assertEquals($this->sortFields($expected), $this->sortFields($actual));
     }
 
     public function testDoctrineGuessing(): void
@@ -791,5 +794,20 @@ abstract class ConfigurationMetadataTest extends WebTestCase
             $this->assertInstanceOf(MetadataConfigurationException::class, $e);
             $this->assertMatchesRegularExpression('/The provider provides a "mutation" but the type expects a "query"/', $e->getPrevious()->getMessage());
         }
+    }
+
+    private function sortFields(array $data): array
+    {
+        if (array_key_exists('fields', $data)) {
+            $fields = $data['fields'];
+            usort($fields, static fn (array $a, array $b): int => $a['name'] <=> $b['name']);
+            foreach ($fields as $index => $field) {
+                ksort($field);
+                $fields[$index] = $field;
+            }
+            $data['fields'] = $fields;
+        }
+
+        return $data;
     }
 }

@@ -23,12 +23,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Overblog\\GraphQL\\Bundle\\ConfigurationYamlBundle\\": "src/"
+      "Overblog\\GraphQLConfigurationYamlBundle\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Overblog\\GraphQL\\Bundle\\ConfigurationYamlBundle\\Tests\\": "tests/"
+      "Overblog\\GraphQLConfigurationYamlBundle\\Tests\\": "tests/"
     }
   },
   "license": "MIT",

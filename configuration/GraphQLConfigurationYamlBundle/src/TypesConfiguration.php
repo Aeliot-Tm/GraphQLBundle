@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationYamlBundle;
+namespace Overblog\GraphQLConfigurationYamlBundle;
 
-use Overblog\GraphQL\Bundle\ConfigurationYamlBundle\Processor\InheritanceProcessor;
+use Overblog\GraphQLConfigurationYamlBundle\Processor\InheritanceProcessor;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

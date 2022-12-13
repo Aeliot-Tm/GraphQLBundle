@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationYamlBundle\Processor;
+namespace Overblog\GraphQLConfigurationYamlBundle\Processor;
 
 use InvalidArgumentException;
 use Overblog\GraphQLBundle\Definition\Builder\MappingInterface;

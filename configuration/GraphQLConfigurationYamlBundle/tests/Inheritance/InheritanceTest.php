@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationYamlBundle\Tests\Inheritance;
+namespace Overblog\GraphQLConfigurationYamlBundle\Tests\Inheritance;
 
-use Overblog\GraphQL\Bundle\ConfigurationYamlBundle\ConfigurationYamlParser;
-use Overblog\GraphQL\Bundle\ConfigurationYamlBundle\Processor\InheritanceProcessor;
+use Overblog\GraphQLConfigurationYamlBundle\ConfigurationYamlParser;
+use Overblog\GraphQLConfigurationYamlBundle\Processor\InheritanceProcessor;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 final class InheritanceTest extends WebTestCase

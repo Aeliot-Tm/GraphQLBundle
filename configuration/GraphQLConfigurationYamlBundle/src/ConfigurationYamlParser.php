@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationYamlBundle;
+namespace Overblog\GraphQLConfigurationYamlBundle;
 
 use SplFileInfo;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationYamlBundle\Tests;
+namespace Overblog\GraphQLConfigurationYamlBundle\Tests;
 
 final class Constants
 {

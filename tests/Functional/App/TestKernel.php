@@ -6,7 +6,7 @@ namespace Overblog\GraphQLBundle\Tests\Functional\App;
 
 use Overblog\GraphQLConfigurationMetadataBundle\GraphQLConfigurationMetadataBundle;
 use Overblog\GraphQL\Bundle\ConfigurationSdlBundle\GraphQLConfigurationSdlBundle;
-use Overblog\GraphQL\Bundle\ConfigurationYamlBundle\GraphQLConfigurationYamlBundle;
+use Overblog\GraphQLConfigurationYamlBundle\GraphQLConfigurationYamlBundle;
 use Overblog\GraphQLBundle\OverblogGraphQLBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\MonologBundle\MonologBundle;

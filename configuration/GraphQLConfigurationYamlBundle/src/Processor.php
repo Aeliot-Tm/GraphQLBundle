@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationYamlBundle;
+namespace Overblog\GraphQLConfigurationYamlBundle;
 
-// use Overblog\GraphQL\Bundle\ConfigurationYamlBundle\Processor\BuilderProcessor;
-use Overblog\GraphQL\Bundle\ConfigurationYamlBundle\Processor\InheritanceProcessor;
-// use Overblog\GraphQL\Bundle\ConfigurationYamlBundle\Processor\NamedConfigProcessor;
-use Overblog\GraphQL\Bundle\ConfigurationYamlBundle\Processor\ProcessorInterface;
-use Overblog\GraphQL\Bundle\ConfigurationYamlBundle\Processor\RelayProcessor;
+// use Overblog\GraphQLConfigurationYamlBundle\Processor\BuilderProcessor;
+use Overblog\GraphQLConfigurationYamlBundle\Processor\InheritanceProcessor;
+// use Overblog\GraphQLConfigurationYamlBundle\Processor\NamedConfigProcessor;
+use Overblog\GraphQLConfigurationYamlBundle\Processor\ProcessorInterface;
+use Overblog\GraphQLConfigurationYamlBundle\Processor\RelayProcessor;
 
 class Processor implements ProcessorInterface
 {

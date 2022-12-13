@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Overblog\GraphQL\Bundle\ConfigurationYamlBundle\Tests;
+namespace Overblog\GraphQLConfigurationYamlBundle\Tests;
 
-use Overblog\GraphQL\Bundle\ConfigurationYamlBundle\ConfigurationYamlParser;
+use Overblog\GraphQLConfigurationYamlBundle\ConfigurationYamlParser;
 use Overblog\GraphQLBundle\Configuration\Configuration;
 use Overblog\GraphQLBundle\Configuration\ObjectConfiguration;
 use SplFileInfo;

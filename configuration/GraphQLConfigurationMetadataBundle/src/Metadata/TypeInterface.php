@@ -31,10 +31,15 @@ final class TypeInterface extends Metadata
      * @see https://www.php.net/manual/en/functions.arguments.php#functions.arguments.default Example #7 Incorrect usage of default function arguments
      *
      * @param string|null $name         The GraphQL name of the interface
-     * @param string      $typeResolver The express resolve type
+     * @param string|null $typeResolver The express resolve type
      */
-    public function __construct(string $name = null, string $typeResolver)
+    public function __construct(string $name = null, string $typeResolver = null)
     {
+        // NOTE: workaround arguments order keeping
+        // TODO: refactor
+        if (!$typeResolver) {
+            throw new \InvalidArgumentException('Type resolver must not be empty');
+        }
         $this->name = $name;
         $this->typeResolver = $typeResolver;
     }

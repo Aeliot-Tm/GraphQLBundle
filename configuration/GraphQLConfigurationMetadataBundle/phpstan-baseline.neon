@@ -1,2 +1,386 @@
 parameters:
 	ignoreErrors:
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\ClassesTypesMap\\:\\:cache\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/ClassesTypesMap.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\ConfigurationMetadataParser\\:\\:getMetadatas\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/ConfigurationMetadataParser.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\MetadataHandler\\\\MetadataHandler\\:\\:setClassesMap\\(\\) invoked with 3 parameters, 2 required\\.$#"
+			count: 1
+			path: src/ConfigurationMetadataParser.php
+
+		-
+			message: "#^Parameter \\#1 \\$objectOrClass of class ReflectionClass constructor expects class\\-string\\<T of object\\>\\|T of object, string given\\.$#"
+			count: 1
+			path: src/ConfigurationMetadataParser.php
+
+		-
+			message: "#^Parameter \\#2 \\$subject of function preg_match expects string, string\\|false given\\.$#"
+			count: 1
+			path: src/ConfigurationMetadataParser.php
+
+		-
+			message: "#^Argument of an invalid type array\\|bool\\|float\\|int\\|string supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/DependencyInjection/OverblogGraphQLConfigurationMetadataExtension.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\DependencyInjection\\\\OverblogGraphQLConfigurationMetadataExtension\\:\\:resolveBundleDirectory\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/DependencyInjection/OverblogGraphQLConfigurationMetadataExtension.php
+
+		-
+			message: "#^Parameter \\#1 \\$objectOrClass of class ReflectionClass constructor expects class\\-string\\<T of object\\>\\|T of object, string given\\.$#"
+			count: 1
+			path: src/DependencyInjection/OverblogGraphQLConfigurationMetadataExtension.php
+
+		-
+			message: "#^Parameter \\#1 \\$path of function dirname expects string, string\\|false given\\.$#"
+			count: 1
+			path: src/DependencyInjection/OverblogGraphQLConfigurationMetadataExtension.php
+
+		-
+			message: "#^Parameter \\#2 \\.\\.\\.\\$values of function sprintf expects bool\\|float\\|int\\|string\\|null, array\\|bool\\|float\\|int\\|string\\|null given\\.$#"
+			count: 1
+			path: src/DependencyInjection/OverblogGraphQLConfigurationMetadataExtension.php
+
+		-
+			message: "#^Abstract class Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Metadata\\\\Builder cannot be an Attribute class\\.$#"
+			count: 1
+			path: src/Metadata/Builder.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:addValue\\(\\)\\.$#"
+			count: 1
+			path: src/MetadataHandler/EnumHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setDeprecationReason\\(\\)\\.$#"
+			count: 1
+			path: src/MetadataHandler/EnumHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$type of method Overblog\\\\GraphQLBundle\\\\Configuration\\\\Configuration\\:\\:addType\\(\\) expects Overblog\\\\GraphQLBundle\\\\Configuration\\\\RootTypeConfiguration, Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration given\\.$#"
+			count: 1
+			path: src/MetadataHandler/EnumHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:addField\\(\\)\\.$#"
+			count: 1
+			path: src/MetadataHandler/InputHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setDefaultValue\\(\\)\\.$#"
+			count: 2
+			path: src/MetadataHandler/InputHandler.php
+
+		-
+			message: "#^Instanceof between Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Metadata\\\\Field and Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Metadata\\\\InputField will always evaluate to false\\.$#"
+			count: 1
+			path: src/MetadataHandler/InputHandler.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\MetadataHandler\\\\InputHandler\\:\\:getGraphQLInputFieldsFromMetadatas\\(\\) should return array\\<Overblog\\\\GraphQLBundle\\\\Configuration\\\\InputFieldConfiguration\\> but returns array\\<int, Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\>\\.$#"
+			count: 1
+			path: src/MetadataHandler/InputHandler.php
+
+		-
+			message: "#^PHPDoc tag @return with type array\\<string, array\\|string\\> is incompatible with native type Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\|null\\.$#"
+			count: 1
+			path: src/MetadataHandler/InputHandler.php
+
+		-
+			message: "#^PHPDoc tag @throws with type Overblog\\\\GraphQLConfigurationMetadataBundle\\\\MetadataHandler\\\\AnnotationException is not subtype of Throwable$#"
+			count: 1
+			path: src/MetadataHandler/InputHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$type of method Overblog\\\\GraphQLBundle\\\\Configuration\\\\Configuration\\:\\:addType\\(\\) expects Overblog\\\\GraphQLBundle\\\\Configuration\\\\RootTypeConfiguration, Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration given\\.$#"
+			count: 1
+			path: src/MetadataHandler/InputHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:addField\\(\\)\\.$#"
+			count: 1
+			path: src/MetadataHandler/InterfaceHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setResolveType\\(\\)\\.$#"
+			count: 1
+			path: src/MetadataHandler/InterfaceHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$type of method Overblog\\\\GraphQLBundle\\\\Configuration\\\\Configuration\\:\\:addType\\(\\) expects Overblog\\\\GraphQLBundle\\\\Configuration\\\\RootTypeConfiguration, Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration given\\.$#"
+			count: 1
+			path: src/MetadataHandler/InterfaceHandler.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\MetadataHandler\\\\MetadataHandler\\:\\:getDefaultSchemaName\\(\\) should return string but returns int\\|string\\|null\\.$#"
+			count: 1
+			path: src/MetadataHandler/MetadataHandler.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\MetadataHandler\\\\MetadataHandler\\:\\:getMetadatas\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/MetadataHandler/MetadataHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:addField\\(\\)\\.$#"
+			count: 1
+			path: src/MetadataHandler/ObjectHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setDefaultValue\\(\\)\\.$#"
+			count: 2
+			path: src/MetadataHandler/ObjectHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setDeprecationReason\\(\\)\\.$#"
+			count: 1
+			path: src/MetadataHandler/ObjectHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setInterfaces\\(\\)\\.$#"
+			count: 1
+			path: src/MetadataHandler/ObjectHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setIsTypeOf\\(\\)\\.$#"
+			count: 1
+			path: src/MetadataHandler/ObjectHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setResolveField\\(\\)\\.$#"
+			count: 1
+			path: src/MetadataHandler/ObjectHandler.php
+
+		-
+			message: "#^Expression on left side of \\?\\? is not nullable\\.$#"
+			count: 2
+			path: src/MetadataHandler/ObjectHandler.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\MetadataHandler\\\\ObjectHandler\\:\\:getGraphQLFieldsFromProviders\\(\\) should return array\\<string, array\\> but returns array\\<int, Overblog\\\\GraphQLBundle\\\\Configuration\\\\FieldConfiguration\\>\\.$#"
+			count: 1
+			path: src/MetadataHandler/ObjectHandler.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\MetadataHandler\\\\ObjectHandler\\:\\:guessArgs\\(\\) should return array\\<Overblog\\\\GraphQLBundle\\\\Configuration\\\\ArgumentConfiguration\\> but returns array\\<int, Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\>\\.$#"
+			count: 1
+			path: src/MetadataHandler/ObjectHandler.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$expectedMetadata$#"
+			count: 1
+			path: src/MetadataHandler/ObjectHandler.php
+
+		-
+			message: "#^PHPDoc tag @param references unknown parameter\\: \\$fieldMetadataName$#"
+			count: 1
+			path: src/MetadataHandler/ObjectHandler.php
+
+		-
+			message: "#^PHPDoc tag @return with type array\\<string, array\\> is incompatible with native type Overblog\\\\GraphQLBundle\\\\Configuration\\\\FieldConfiguration\\|null\\.$#"
+			count: 1
+			path: src/MetadataHandler/ObjectHandler.php
+
+		-
+			message: "#^PHPDoc tag @throws with type Overblog\\\\GraphQLConfigurationMetadataBundle\\\\MetadataHandler\\\\AnnotationException is not subtype of Throwable$#"
+			count: 2
+			path: src/MetadataHandler/ObjectHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$type of method Overblog\\\\GraphQLBundle\\\\Configuration\\\\Configuration\\:\\:addType\\(\\) expects Overblog\\\\GraphQLBundle\\\\Configuration\\\\RootTypeConfiguration, Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration given\\.$#"
+			count: 1
+			path: src/MetadataHandler/ObjectHandler.php
+
+		-
+			message: "#^Access to an undefined property Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Metadata\\\\Metadata\\:\\:\\$node\\.$#"
+			count: 1
+			path: src/MetadataHandler/RelayConnectionHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$type of method Overblog\\\\GraphQLBundle\\\\Configuration\\\\Configuration\\:\\:addType\\(\\) expects Overblog\\\\GraphQLBundle\\\\Configuration\\\\RootTypeConfiguration, Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration given\\.$#"
+			count: 1
+			path: src/MetadataHandler/RelayConnectionHandler.php
+
+		-
+			message: "#^Access to an undefined property Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Metadata\\\\Metadata\\:\\:\\$node\\.$#"
+			count: 1
+			path: src/MetadataHandler/RelayEdgeHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setParseLiteral\\(\\)\\.$#"
+			count: 1
+			path: src/MetadataHandler/ScalarHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setParseValue\\(\\)\\.$#"
+			count: 1
+			path: src/MetadataHandler/ScalarHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setScalarType\\(\\)\\.$#"
+			count: 1
+			path: src/MetadataHandler/ScalarHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setSerialize\\(\\)\\.$#"
+			count: 1
+			path: src/MetadataHandler/ScalarHandler.php
+
+		-
+			message: "#^PHPDoc tag @return with type array\\<string, array\\|string\\> is incompatible with native type Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\|null\\.$#"
+			count: 1
+			path: src/MetadataHandler/ScalarHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$type of method Overblog\\\\GraphQLBundle\\\\Configuration\\\\Configuration\\:\\:addType\\(\\) expects Overblog\\\\GraphQLBundle\\\\Configuration\\\\RootTypeConfiguration, Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration given\\.$#"
+			count: 1
+			path: src/MetadataHandler/ScalarHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setResolveType\\(\\)\\.$#"
+			count: 1
+			path: src/MetadataHandler/UnionHandler.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setTypes\\(\\)\\.$#"
+			count: 1
+			path: src/MetadataHandler/UnionHandler.php
+
+		-
+			message: "#^PHPDoc tag @return with type array\\<string, array\\|string\\> is incompatible with native type Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\|null\\.$#"
+			count: 1
+			path: src/MetadataHandler/UnionHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$type of method Overblog\\\\GraphQLBundle\\\\Configuration\\\\Configuration\\:\\:addType\\(\\) expects Overblog\\\\GraphQLBundle\\\\Configuration\\\\RootTypeConfiguration, Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration given\\.$#"
+			count: 1
+			path: src/MetadataHandler/UnionHandler.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\ConfigurationMetadataTest\\:\\:getType\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/ConfigurationMetadataTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$expected of method PHPUnit\\\\Framework\\\\Assert\\:\\:assertInstanceOf\\(\\) expects class\\-string\\<object\\>, string given\\.$#"
+			count: 1
+			path: tests/ConfigurationMetadataTest.php
+
+		-
+			message: "#^Call to method disableOriginalConstructor\\(\\) on an unknown class PHPUnit_Framework_MockObject_MockBuilder\\.$#"
+			count: 1
+			path: tests/ExpressionFunction/ArgumentsTest.php
+
+		-
+			message: "#^Call to method disableOriginalConstructor\\(\\) on an unknown class PHPUnit_Framework_MockObject_MockBuilder\\.$#"
+			count: 1
+			path: tests/ExpressionFunction/TestCase.php
+
+		-
+			message: "#^Call to method setMethods\\(\\) on an unknown class PHPUnit_Framework_MockObject_MockBuilder\\.$#"
+			count: 1
+			path: tests/ExpressionFunction/TestCase.php
+
+		-
+			message: "#^Class Symfony\\\\Component\\\\Security\\\\Core\\\\Security not found\\.$#"
+			count: 1
+			path: tests/ExpressionFunction/TestCase.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\ExpressionFunction\\\\TestCase\\:\\:getCoreSecurityMock\\(\\) has invalid return type Symfony\\\\Component\\\\Security\\\\Core\\\\Security\\.$#"
+			count: 1
+			path: tests/ExpressionFunction/TestCase.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function call_user_func_array expects callable\\(\\)\\: mixed, array\\{mixed, 'with'\\} given\\.$#"
+			count: 1
+			path: tests/ExpressionFunction/TestCase.php
+
+		-
+			message: "#^Parameter \\#1 \\$objectOrClass of class ReflectionClass constructor expects class\\-string\\<T of object\\>\\|T of object, string given\\.$#"
+			count: 1
+			path: tests/TypeGuesser/DoctrineTypeGuesserExtensionTest.php
+
+		-
+			message: "#^Parameter \\$targetEntity of attribute class Doctrine\\\\ORM\\\\Mapping\\\\ManyToMany constructor expects class\\-string\\|null, string given\\.$#"
+			count: 1
+			path: tests/fixtures/Guesser/Doctrine/LightsaberAttributes.php
+
+		-
+			message: "#^Parameter \\$targetEntity of attribute class Doctrine\\\\ORM\\\\Mapping\\\\ManyToOne constructor expects class\\-string\\|null, string given\\.$#"
+			count: 1
+			path: tests/fixtures/Guesser/Doctrine/LightsaberAttributes.php
+
+		-
+			message: "#^Parameter \\$targetEntity of attribute class Doctrine\\\\ORM\\\\Mapping\\\\OneToMany constructor expects class\\-string\\|null, string given\\.$#"
+			count: 1
+			path: tests/fixtures/Guesser/Doctrine/LightsaberAttributes.php
+
+		-
+			message: "#^Parameter \\$targetEntity of attribute class Doctrine\\\\ORM\\\\Mapping\\\\OneToOne constructor expects class\\-string\\|null, string given\\.$#"
+			count: 2
+			path: tests/fixtures/Guesser/Doctrine/LightsaberAttributes.php
+
+		-
+			message: "#^Parameter \\$targetEntity of attribute class Doctrine\\\\ORM\\\\Mapping\\\\OneToOne constructor expects class\\-string\\|null, string given\\.$#"
+			count: 1
+			path: tests/fixtures/Invalid/doctrineRelationGuessing/InvalidDoctrineRelationGuessing.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Invalid\\\\privateMethod\\\\InvalidPrivateMethod\\:\\:gql\\(\\) is unused\\.$#"
+			count: 1
+			path: tests/fixtures/Invalid/privateMethod/InvalidPrivateMethod.php
+
+		-
+			message: "#^Access to an undefined property GraphQL\\\\Language\\\\AST\\\\Node\\:\\:\\$value\\.$#"
+			count: 1
+			path: tests/fixtures/Scalar/GalaxyCoordinates.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Scalar\\\\GalaxyCoordinates\\:\\:parseLiteral\\(\\) should return DateTimeInterface but returns array\\<int, string\\>\\.$#"
+			count: 1
+			path: tests/fixtures/Scalar/GalaxyCoordinates.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Scalar\\\\GalaxyCoordinates\\:\\:parseValue\\(\\) should return DateTimeInterface but returns array\\<int, string\\>\\.$#"
+			count: 1
+			path: tests/fixtures/Scalar/GalaxyCoordinates.php
+
+		-
+			message: "#^Property Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Type\\\\Animal\\:\\:\\$lives is unused\\.$#"
+			count: 1
+			path: tests/fixtures/Type/Animal.php
+
+		-
+			message: "#^Property Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Type\\\\Animal\\:\\:\\$name is unused\\.$#"
+			count: 1
+			path: tests/fixtures/Type/Animal.php
+
+		-
+			message: "#^Parameter \\$targetEntity of attribute class Doctrine\\\\ORM\\\\Mapping\\\\ManyToMany constructor expects class\\-string\\|null, string given\\.$#"
+			count: 1
+			path: tests/fixtures/Type/Lightsaber.php
+
+		-
+			message: "#^Parameter \\$targetEntity of attribute class Doctrine\\\\ORM\\\\Mapping\\\\ManyToOne constructor expects class\\-string\\|null, string given\\.$#"
+			count: 1
+			path: tests/fixtures/Type/Lightsaber.php
+
+		-
+			message: "#^Parameter \\$targetEntity of attribute class Doctrine\\\\ORM\\\\Mapping\\\\OneToMany constructor expects class\\-string\\|null, string given\\.$#"
+			count: 1
+			path: tests/fixtures/Type/Lightsaber.php
+
+		-
+			message: "#^Parameter \\$targetEntity of attribute class Doctrine\\\\ORM\\\\Mapping\\\\OneToOne constructor expects class\\-string\\|null, string given\\.$#"
+			count: 2
+			path: tests/fixtures/Type/Lightsaber.php

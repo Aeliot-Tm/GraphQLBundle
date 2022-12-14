@@ -9,3 +9,7 @@ parameters:
   paths:
     - %currentWorkingDirectory%/src
     - %currentWorkingDirectory%/tests
+
+  symfony:
+    # container_xml_path: var/cache/dev/srcApp_KernelDevDebugContainer.xml
+    console_application_loader: tests/console-application.php

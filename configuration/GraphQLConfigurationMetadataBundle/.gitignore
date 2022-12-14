@@ -3,6 +3,7 @@ phpunit.xml
 /vendor
 /lib/*/vendor
 /bin
+/var
 composer.lock
 composer.phar
 .php_cs.cache

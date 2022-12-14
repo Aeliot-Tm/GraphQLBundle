@@ -22,11 +22,12 @@
     "overblog/graphql-bundle": "@dev",
     "phpunit/phpunit": "^9.4",
     "symfony/yaml": "^4.4 || ^5.0",
-    "phpstan/extension-installer": "^1.0",
-    "phpstan/phpstan": "^0.12.58",
-    "phpstan/phpstan-phpunit": "^0.12.11",
-    "phpstan/phpstan-symfony": "^0.12.6",
-    "symfony/phpunit-bridge": "^4.4 || ^5.0"
+    "phpstan/extension-installer": "^1.2",
+    "phpstan/phpstan": "^1.8",
+    "phpstan/phpstan-phpunit": "^1.2",
+    "phpstan/phpstan-symfony": "^1.2",
+    "symfony/phpunit-bridge": "^4.4 || ^5.0",
+    "symfony/dotenv": "^5.2"
   },
   "autoload": {
     "psr-4": {
@@ -37,6 +38,11 @@
     "psr-4": {
       "Overblog\\GraphQLConfigurationMetadataBundle\\Tests\\": "tests/",
       "Overblog\\GraphQLBundle\\Tests\\": "vendor/overblog/graphql-bundle/tests/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
     }
   },
   "extra": {

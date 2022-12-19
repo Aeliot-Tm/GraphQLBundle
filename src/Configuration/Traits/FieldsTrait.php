@@ -10,6 +10,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 trait FieldsTrait
 {
     /**
+     * TODO: check if all fields have unique names.
+     *
      * @Assert\Valid
      *
      * @var FieldConfiguration[]

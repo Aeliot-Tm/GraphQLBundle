@@ -10,7 +10,11 @@ class ObjectConfiguration extends RootTypeConfiguration
 {
     use FieldsTrait;
 
-    /** @var string[] */
+    /**
+     * TODO: check if the list of interfaces have only unique values.
+     *
+     * @var string[]
+     */
     protected array $interfaces = [];
 
     protected ?string $isTypeOf = null;

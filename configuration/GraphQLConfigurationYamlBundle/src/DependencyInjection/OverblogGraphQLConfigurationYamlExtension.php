@@ -22,9 +22,15 @@ class OverblogGraphQLConfigurationYamlExtension extends Extension
         $container->setParameter('graphql.configuration.directories.yaml', $directories);
     }
 
+    /**
+     * @param array<string,mixed> $config
+     *
+     * @return string[]
+     */
     protected function resolveMappingDirectories(ContainerBuilder $container, array $config): array
     {
         $rootDirectory = $container->getParameter('kernel.project_dir');
+        /** @var iterable<class-string> $bundles */
         $bundles = $container->getParameter('kernel.bundles');
 
         $directories = [];
@@ -40,7 +46,10 @@ class OverblogGraphQLConfigurationYamlExtension extends Extension
         return [...$directories, ...$config['directories']];
     }
 
-    protected function resolveBundleDirectory(string $bundleClass)
+    /**
+     * @param class-string $bundleClass
+     */
+    protected function resolveBundleDirectory(string $bundleClass): string
     {
         return dirname((new ReflectionClass($bundleClass))->getFileName());
     }

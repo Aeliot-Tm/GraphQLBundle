@@ -18,18 +18,18 @@ class ConfigurationYamlParser extends ConfigurationParser
 {
     protected Parser $yamlParser;
 
-    public function getYamlParser()
+    public function getSupportedExtensions(): array
+    {
+        return ['yaml', 'yml'];
+    }
+
+    protected function getYamlParser(): Parser
     {
         if (!isset($this->yamlParser)) {
             $this->yamlParser = new Parser();
         }
 
         return $this->yamlParser;
-    }
-
-    public function getSupportedExtensions(): array
-    {
-        return ['yaml', 'yml'];
     }
 
     protected function parseFile(SplFileInfo $file): array

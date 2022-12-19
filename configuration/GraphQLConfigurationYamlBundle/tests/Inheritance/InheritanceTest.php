@@ -10,7 +10,10 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 final class InheritanceTest extends WebTestCase
 {
-    protected function getInheritanceConfiguration()
+    /**
+     * @return array<string,mixed>
+     */
+    protected function getInheritanceConfiguration(): array
     {
         $parser = new ConfigurationYamlParser([__DIR__.DIRECTORY_SEPARATOR.'../fixtures/inheritance']);
 

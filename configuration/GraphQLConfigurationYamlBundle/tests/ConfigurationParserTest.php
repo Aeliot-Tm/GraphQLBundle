@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Overblog\GraphQLConfigurationYamlBundle\Tests;
 
+use Overblog\GraphQLBundle\Configuration\RootTypeConfiguration;
 use Overblog\GraphQLConfigurationYamlBundle\ConfigurationYamlParser;
 use Overblog\GraphQLBundle\Configuration\Configuration;
 use Overblog\GraphQLBundle\Configuration\ObjectConfiguration;
@@ -23,7 +24,10 @@ class ConfigurationParserTest extends WebTestCase
         $this->configuration = unserialize(serialize($this->getConfiguration()));
     }
 
-    protected function getConfiguration(array $includeDirectories = [])
+    /**
+     * @param string[] $includeDirectories
+     */
+    protected function getConfiguration(array $includeDirectories = []): Configuration
     {
         $finder = Finder::create()
             ->in(__DIR__.'/fixtures')
@@ -34,12 +38,13 @@ class ConfigurationParserTest extends WebTestCase
         $directories = array_values(array_map(fn (SplFileInfo $dir) => $dir->getPathname(), iterator_to_array($finder->getIterator())));
         $directories = [...$directories, ...$includeDirectories];
 
-        $generator = new ConfigurationYamlParser($directories);
-
-        return $generator->getConfiguration();
+        return (new ConfigurationYamlParser($directories))->getConfiguration();
     }
 
-    protected function getType(string $name, string $configurationClass = null)
+    /**
+     * @param class-string|null $configurationClass
+     */
+    protected function getType(string $name, string $configurationClass = null): RootTypeConfiguration
     {
         $type = $this->configuration->getType($name);
         if (!$type) {

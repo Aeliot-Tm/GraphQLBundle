@@ -9,7 +9,7 @@
          convertWarningsToExceptions="true"
          processIsolation="false"
          stopOnFailure="false"
-         bootstrap="vendor/autoload.php"
+         bootstrap="tests/bootstrap.php"
         >
     <testsuites>
         <testsuite name="OverblogGraphQLBundle Metadata Configuration Test Suite">

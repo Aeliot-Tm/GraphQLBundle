@@ -1,2 +1,76 @@
 parameters:
 	ignoreErrors:
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\InterfaceConfiguration\\|Overblog\\\\GraphQLBundle\\\\Configuration\\\\ObjectConfiguration\\:\\:setInterfaces\\(\\)\\.$#"
+			count: 1
+			path: src/ConfigurationParser.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\InterfaceConfiguration\\|Overblog\\\\GraphQLBundle\\\\Configuration\\\\ObjectConfiguration\\:\\:setResolveField\\(\\)\\.$#"
+			count: 1
+			path: src/ConfigurationParser.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setDeprecationReason\\(\\)\\.$#"
+			count: 1
+			path: src/ConfigurationParser.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationYamlBundle\\\\ConfigurationYamlParser\\:\\:getYamlParser\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/ConfigurationYamlParser.php
+
+		-
+			message: "#^Argument of an invalid type array\\|bool\\|float\\|int\\|string supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/DependencyInjection/OverblogGraphQLConfigurationYamlExtension.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationYamlBundle\\\\DependencyInjection\\\\OverblogGraphQLConfigurationYamlExtension\\:\\:resolveBundleDirectory\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/DependencyInjection/OverblogGraphQLConfigurationYamlExtension.php
+
+		-
+			message: "#^Parameter \\#1 \\$objectOrClass of class ReflectionClass constructor expects class\\-string\\<T of object\\>\\|T of object, string given\\.$#"
+			count: 1
+			path: src/DependencyInjection/OverblogGraphQLConfigurationYamlExtension.php
+
+		-
+			message: "#^Parameter \\#1 \\$path of function dirname expects string, string\\|false given\\.$#"
+			count: 1
+			path: src/DependencyInjection/OverblogGraphQLConfigurationYamlExtension.php
+
+		-
+			message: "#^Parameter \\#2 \\.\\.\\.\\$values of function sprintf expects bool\\|float\\|int\\|string\\|null, array\\|bool\\|float\\|int\\|string\\|null given\\.$#"
+			count: 1
+			path: src/DependencyInjection/OverblogGraphQLConfigurationYamlExtension.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationYamlBundle\\\\Processor\\\\BuilderProcessor\\:\\:getBuilder\\(\\) should return Overblog\\\\GraphQLBundle\\\\Definition\\\\Builder\\\\MappingInterface but returns object\\.$#"
+			count: 1
+			path: src/Processor/BuilderProcessor.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationYamlBundle\\\\Tests\\\\ConfigurationParserTest\\:\\:getConfiguration\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/ConfigurationParserTest.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationYamlBundle\\\\Tests\\\\ConfigurationParserTest\\:\\:getType\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/ConfigurationParserTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$expected of method PHPUnit\\\\Framework\\\\Assert\\:\\:assertInstanceOf\\(\\) expects class\\-string\\<object\\>, string given\\.$#"
+			count: 1
+			path: tests/ConfigurationParserTest.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationYamlBundle\\\\Tests\\\\Inheritance\\\\InheritanceTest\\:\\:getInheritanceConfiguration\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Inheritance/InheritanceTest.php
+
+		-
+			message: "#^Class Overblog\\\\GraphQLConfigurationSdlBundle\\\\GraphQLConfigurationSdlBundle not found\\.$#"
+			count: 1
+			path: tests/config/bundles.php

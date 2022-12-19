@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Overblog\GraphQLConfigurationSdlBundle\ASTConverter;
 
 use GraphQL\Language\AST\Node;
+use LogicException;
 use Overblog\GraphQLBundle\Configuration\InputConfiguration;
 use Overblog\GraphQLBundle\Configuration\InterfaceConfiguration;
 use Overblog\GraphQLBundle\Configuration\ObjectConfiguration;
@@ -28,6 +29,10 @@ class ObjectNode implements NodeInterface
                 $configuration = InputConfiguration::create($name);
                 $fieldsType = Fields::TYPE_INPUT_FIELDS;
                 break;
+            default:
+                // TODO: implement protected getters of $configuration & $fieldsType
+                //       instead of rigid switch
+                throw new LogicException(sprintf('Invalid type: %s', static::TYPENAME));
         }
 
         $configuration->setDescription(Description::get($node));

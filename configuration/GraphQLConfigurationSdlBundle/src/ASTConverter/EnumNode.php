@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Overblog\GraphQLConfigurationSdlBundle\ASTConverter;
 
+use GraphQL\Language\AST\EnumTypeDefinitionNode;
 use GraphQL\Language\AST\Node;
 use Overblog\GraphQLBundle\Configuration\EnumConfiguration;
 use Overblog\GraphQLBundle\Configuration\EnumValueConfiguration;
@@ -11,6 +12,9 @@ use Overblog\GraphQLBundle\Configuration\TypeConfiguration;
 
 class EnumNode implements NodeInterface
 {
+    /**
+     * @param EnumTypeDefinitionNode $node
+     */
     public static function toConfiguration(string $name, Node $node): TypeConfiguration
     {
         $enumConfiguration = EnumConfiguration::create($name)

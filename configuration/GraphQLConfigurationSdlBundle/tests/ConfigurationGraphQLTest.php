@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Overblog\GraphQLConfigurationSdlBundle\Tests;
 
 use Exception;
+use Overblog\GraphQLBundle\Configuration\Configuration;
 use Overblog\GraphQLConfigurationSdlBundle\ASTConverter\CustomScalarNode;
 use Overblog\GraphQLConfigurationSdlBundle\ConfigurationSdlParser;
 use Overblog\GraphQLBundle\Configuration\TypeConfiguration;
@@ -26,25 +27,22 @@ class ConfigurationGraphQLTest extends WebTestCase
         return array_filter($config, fn ($item) => !is_array($item) || !empty($item));
     }
 
-    protected function getConfiguration(string $directory = null)
+    protected function getConfiguration(string $directory = null): Configuration
     {
         $directories = null !== $directory ? [$directory] : [__DIR__.'/fixtures/schema'];
-        $generator = new ConfigurationSdlParser($directories);
 
-        return $generator->getConfiguration();
+        return (new ConfigurationSdlParser($directories))->getConfiguration();
     }
 
-    protected function parseFile(string $dirname)
+    protected function parseFile(string $dirname): Configuration
     {
-        $parser = new ConfigurationSdlParser([$dirname]);
-
-        return $parser->getConfiguration();
+        return (new ConfigurationSdlParser([$dirname]))->getConfiguration();
     }
 
     public function testParse(): void
     {
         $configuration = $this->getConfiguration();
-        $types = array_map(fn (TypeConfiguration $type) => $type->toArray(), $configuration->getTypes());
+        $types = array_map(static fn (TypeConfiguration $type): array => $type->toArray(), $configuration->getTypes());
         $expected = include __DIR__.'/fixtures/schema.php';
 
         $this->assertSame($expected, $types);

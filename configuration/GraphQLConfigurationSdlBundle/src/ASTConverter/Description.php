@@ -13,16 +13,16 @@ final class Description
 {
     public static function get(Node $node): ?string
     {
-        return self::cleanAstDescription($node->description);
+        return self::cleanAstDescription($node->description ?? null);
     }
 
-    private static function cleanAstDescription(?StringValueNode $description): ?string
+    private static function cleanAstDescription(?StringValueNode $descriptionNode): ?string
     {
-        if (null === $description) {
+        if (null === $descriptionNode) {
             return null;
         }
 
-        $description = trim($description->value);
+        $description = trim($descriptionNode->value);
 
         return empty($description) ? null : $description;
     }

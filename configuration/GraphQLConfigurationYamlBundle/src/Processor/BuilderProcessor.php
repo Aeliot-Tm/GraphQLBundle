@@ -16,7 +16,6 @@ use Overblog\GraphQLBundle\Relay\Node\GlobalIdFieldDefinition;
 use Overblog\GraphQLBundle\Relay\Node\NodeFieldDefinition;
 use Overblog\GraphQLBundle\Relay\Node\PluralIdentifyingRootFieldDefinition;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
-
 use function array_combine;
 use function array_fill;
 use function array_keys;

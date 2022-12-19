@@ -8,7 +8,6 @@ use Overblog\GraphQLConfigurationYamlBundle\Processor\InheritanceProcessor;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
-
 use function array_keys;
 use function array_map;
 use function implode;

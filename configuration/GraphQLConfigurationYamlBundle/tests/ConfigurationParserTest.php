@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Overblog\GraphQLConfigurationYamlBundle\Tests;
 
-use Overblog\GraphQLBundle\Configuration\RootTypeConfiguration;
-use Overblog\GraphQLConfigurationYamlBundle\ConfigurationYamlParser;
 use Overblog\GraphQLBundle\Configuration\Configuration;
 use Overblog\GraphQLBundle\Configuration\ObjectConfiguration;
+use Overblog\GraphQLBundle\Configuration\RootTypeConfiguration;
+use Overblog\GraphQLConfigurationYamlBundle\ConfigurationYamlParser;
 use SplFileInfo;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;

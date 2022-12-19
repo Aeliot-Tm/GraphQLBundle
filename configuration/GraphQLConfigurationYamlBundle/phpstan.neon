@@ -1,0 +1,15 @@
+includes:
+    - phpstan-baseline.neon
+
+parameters:
+  level: 7
+  reportUnmatchedIgnoredErrors: false
+  checkMissingIterableValueType: false
+  checkGenericClassInNonGenericObjectType: false
+  paths:
+    - %currentWorkingDirectory%/src
+    - %currentWorkingDirectory%/tests
+
+  symfony:
+    # container_xml_path: var/cache/dev/srcApp_KernelDevDebugContainer.xml
+    console_application_loader: tests/console-application.php

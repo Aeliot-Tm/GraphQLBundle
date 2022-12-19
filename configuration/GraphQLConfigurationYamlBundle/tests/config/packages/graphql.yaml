@@ -1,0 +1,6 @@
+overblog_graphql:
+  security:
+    query_max_depth: 11
+    query_max_complexity: 1000
+    handle_cors: false
+    enable_introspection: '%kernel.debug%'

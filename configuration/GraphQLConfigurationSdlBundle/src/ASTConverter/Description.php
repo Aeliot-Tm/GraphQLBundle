@@ -6,7 +6,6 @@ namespace Overblog\GraphQLConfigurationSdlBundle\ASTConverter;
 
 use GraphQL\Language\AST\Node;
 use GraphQL\Language\AST\StringValueNode;
-
 use function trim;
 
 final class Description

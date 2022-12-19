@@ -6,9 +6,9 @@ namespace Overblog\GraphQLConfigurationSdlBundle\Tests;
 
 use Exception;
 use Overblog\GraphQLBundle\Configuration\Configuration;
+use Overblog\GraphQLBundle\Configuration\TypeConfiguration;
 use Overblog\GraphQLConfigurationSdlBundle\ASTConverter\CustomScalarNode;
 use Overblog\GraphQLConfigurationSdlBundle\ConfigurationSdlParser;
-use Overblog\GraphQLBundle\Configuration\TypeConfiguration;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 use function sprintf;

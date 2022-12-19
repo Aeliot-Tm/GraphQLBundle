@@ -15,7 +15,6 @@ use Overblog\GraphQLBundle\Configuration\Configuration;
 use Overblog\GraphQLBundle\ConfigurationProvider\ConfigurationFilesParser;
 use SplFileInfo;
 use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
-
 use function array_keys;
 use function array_pop;
 use function call_user_func;

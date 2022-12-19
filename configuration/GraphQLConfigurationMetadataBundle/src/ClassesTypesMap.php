@@ -14,7 +14,7 @@ final class ClassesTypesMap
     /**
      * @var array<string, array{class: string, type: string}>
      */
-    private array $classesMap = [];
+    private array $classesMap;
 
     public function __construct(CacheInterface $cache = null, array $classesMap = [])
     {
@@ -25,10 +25,10 @@ final class ClassesTypesMap
         }
     }
 
-    public function cache()
+    public function cache(): void
     {
         if ($this->cache) {
-            $this->cache->get(self::CACHE_KEY, fn () => $this->classesMap, INF);
+            $this->cache->get(self::CACHE_KEY, fn (): array => $this->classesMap, INF);
         }
     }
 

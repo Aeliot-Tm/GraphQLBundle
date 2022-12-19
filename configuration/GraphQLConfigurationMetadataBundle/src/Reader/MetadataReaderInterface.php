@@ -10,5 +10,8 @@ interface MetadataReaderInterface
 {
     public function formatMetadata(string $metadataType): string;
 
+    /**
+     * @return object[]
+     */
     public function getMetadatas(Reflector $reflector): array;
 }

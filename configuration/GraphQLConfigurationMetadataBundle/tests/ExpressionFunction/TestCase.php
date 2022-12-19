@@ -8,8 +8,10 @@ use Overblog\GraphQLBundle\Definition\GraphQLServices;
 use Overblog\GraphQLBundle\ExpressionLanguage\ExpressionLanguage;
 use Overblog\GraphQLBundle\Generator\TypeGenerator;
 use Overblog\GraphQLBundle\Resolver\MutationResolver;
+use Overblog\GraphQLBundle\Resolver\QueryResolver;
 use Overblog\GraphQLBundle\Resolver\TypeResolver;
 use Overblog\GraphQLBundle\Security\Security;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\MockObject\Rule\AnyInvokedCount;
 use PHPUnit\Framework\MockObject\Rule\InvokedCount;
 use PHPUnit\Framework\MockObject\Stub;
@@ -94,7 +96,10 @@ abstract class TestCase extends BaseTestCase
         return new Security($security);
     }
 
-    private function getCoreSecurityMock(): CoreSecurity
+    /**
+     * @return CoreSecurity & MockObject
+     */
+    private function getCoreSecurityMock(): MockObject
     {
         return $this->getMockBuilder(CoreSecurity::class)
             ->disableOriginalConstructor()
@@ -105,9 +110,9 @@ abstract class TestCase extends BaseTestCase
     protected function createGraphQLServices(array $services = []): GraphQLServices
     {
         $locateableServices = [
-            'typeResolver' => fn () => $this->createMock(TypeResolver::class),
-            'queryResolver' => fn () => $this->createMock(TypeResolver::class),
-            'mutationResolver' => fn () => $$this->createMock(MutationResolver::class),
+            'typeResolver' => fn (): TypeResolver => $this->createMock(TypeResolver::class),
+            'queryResolver' => fn (): QueryResolver => $this->createMock(QueryResolver::class),
+            'mutationResolver' => fn (): MutationResolver => $this->createMock(MutationResolver::class),
         ];
 
         foreach ($services as $id => $service) {

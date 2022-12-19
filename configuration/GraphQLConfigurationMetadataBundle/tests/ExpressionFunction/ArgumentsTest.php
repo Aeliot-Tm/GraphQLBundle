@@ -14,6 +14,7 @@ use Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\InputType1;
 use Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\InputType2;
 use Overblog\GraphQLConfigurationMetadataBundle\Transformer\ArgumentsTransformer;
 use Overblog\GraphQLBundle\Generator\TypeGenerator;
+use PHPUnit\Framework\MockObject\MockObject;
 use Symfony\Component\Validator\ConstraintViolationList;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Validator\RecursiveValidator;
@@ -38,6 +39,7 @@ final class ArgumentsTest extends TestCase
 
     public function getResolveInfo(array $types): ResolveInfo
     {
+        /** @var MockObject & ResolveInfo $info */
         $info = $this->getMockBuilder(ResolveInfo::class)->disableOriginalConstructor()->getMock();
         $info->schema = new Schema(['types' => $types]);
 
@@ -103,7 +105,7 @@ final class ArgumentsTest extends TestCase
         $this->assertInstanceOf(Enum1::class, $res[2]);
         $this->assertEquals(2, count($res[1]->field1));
         $this->assertIsInt($res[3]);
-        $this->assertEquals($res[4], 'test_string');
+        $this->assertEquals('test_string', $res[4]);
 
         $data = [];
         $res = $transformer->getInstanceAndValidate('InputType1', $data, $info, 'input1');

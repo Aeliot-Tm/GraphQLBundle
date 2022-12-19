@@ -51,6 +51,7 @@ class OverblogGraphQLConfigurationMetadataExtension extends Extension
     protected function resolveMappingDirectories(ContainerBuilder $container, array $config): array
     {
         $rootDirectory = $container->getParameter('kernel.project_dir');
+        /** @var iterable<class-string> $bundles */
         $bundles = $container->getParameter('kernel.bundles');
 
         $directories = [];
@@ -66,7 +67,10 @@ class OverblogGraphQLConfigurationMetadataExtension extends Extension
         return [...$directories, ...$config['directories']];
     }
 
-    protected function resolveBundleDirectory(string $bundleClass)
+    /**
+     * @param class-string $bundleClass
+     */
+    protected function resolveBundleDirectory(string $bundleClass): string
     {
         return dirname((new ReflectionClass($bundleClass))->getFileName());
     }

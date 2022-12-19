@@ -20,28 +20,26 @@ use function implode;
 final class GalaxyCoordinates
 {
     /**
-     * @return string
+     * @param int[] $coordinates
      */
-    public static function serialize(array $coordinates)
+    public static function serialize(array $coordinates): string
     {
         return implode(',', $coordinates);
     }
 
     /**
-     * @param mixed $value
-     *
-     * @return DateTimeInterface
+     * @return string[]
      */
-    public static function parseValue($value)
+    public static function parseValue(?string $value): array
     {
-        return explode(',', $value);
+        return $value ? explode(',', $value) : [];
     }
 
     /**
-     * @return DateTimeInterface
+     * @return string[]
      */
-    public static function parseLiteral(Node $valueNode)
+    public static function parseLiteral(Node $valueNode): array
     {
-        return explode(',', $valueNode->value);
+        return self::parseValue($valueNode->value);
     }
 }

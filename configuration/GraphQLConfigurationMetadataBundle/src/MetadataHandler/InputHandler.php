@@ -60,8 +60,6 @@ class InputHandler extends MetadataHandler
      *
      * @param ReflectionProperty[] $reflectors
      *
-     * @throws AnnotationException
-     *
      * @return InputFieldConfiguration[]
      */
     protected function getGraphQLInputFieldsFromMetadatas(ReflectionClass $reflectionClass, array $reflectors): array

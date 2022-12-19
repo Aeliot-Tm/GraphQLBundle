@@ -1,46 +1,6 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\ClassesTypesMap\\:\\:cache\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: src/ClassesTypesMap.php
-
-		-
-			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\ConfigurationMetadataParser\\:\\:getMetadatas\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: src/ConfigurationMetadataParser.php
-
-		-
-			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\MetadataHandler\\\\MetadataHandler\\:\\:setClassesMap\\(\\) invoked with 3 parameters, 2 required\\.$#"
-			count: 1
-			path: src/ConfigurationMetadataParser.php
-
-		-
-			message: "#^Parameter \\#1 \\$objectOrClass of class ReflectionClass constructor expects class\\-string\\<T of object\\>\\|T of object, string given\\.$#"
-			count: 1
-			path: src/ConfigurationMetadataParser.php
-
-		-
-			message: "#^Parameter \\#2 \\$subject of function preg_match expects string, string\\|false given\\.$#"
-			count: 1
-			path: src/ConfigurationMetadataParser.php
-
-		-
-			message: "#^Argument of an invalid type array\\|bool\\|float\\|int\\|string supplied for foreach, only iterables are supported\\.$#"
-			count: 1
-			path: src/DependencyInjection/OverblogGraphQLConfigurationMetadataExtension.php
-
-		-
-			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\DependencyInjection\\\\OverblogGraphQLConfigurationMetadataExtension\\:\\:resolveBundleDirectory\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: src/DependencyInjection/OverblogGraphQLConfigurationMetadataExtension.php
-
-		-
-			message: "#^Parameter \\#1 \\$objectOrClass of class ReflectionClass constructor expects class\\-string\\<T of object\\>\\|T of object, string given\\.$#"
-			count: 1
-			path: src/DependencyInjection/OverblogGraphQLConfigurationMetadataExtension.php
-
-		-
 			message: "#^Parameter \\#1 \\$path of function dirname expects string, string\\|false given\\.$#"
 			count: 1
 			path: src/DependencyInjection/OverblogGraphQLConfigurationMetadataExtension.php
@@ -96,11 +56,6 @@ parameters:
 			path: src/MetadataHandler/InputHandler.php
 
 		-
-			message: "#^PHPDoc tag @throws with type Overblog\\\\GraphQLConfigurationMetadataBundle\\\\MetadataHandler\\\\AnnotationException is not subtype of Throwable$#"
-			count: 1
-			path: src/MetadataHandler/InputHandler.php
-
-		-
 			message: "#^Parameter \\#1 \\$type of method Overblog\\\\GraphQLBundle\\\\Configuration\\\\Configuration\\:\\:addType\\(\\) expects Overblog\\\\GraphQLBundle\\\\Configuration\\\\RootTypeConfiguration, Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration given\\.$#"
 			count: 1
 			path: src/MetadataHandler/InputHandler.php
@@ -119,16 +74,6 @@ parameters:
 			message: "#^Parameter \\#1 \\$type of method Overblog\\\\GraphQLBundle\\\\Configuration\\\\Configuration\\:\\:addType\\(\\) expects Overblog\\\\GraphQLBundle\\\\Configuration\\\\RootTypeConfiguration, Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration given\\.$#"
 			count: 1
 			path: src/MetadataHandler/InterfaceHandler.php
-
-		-
-			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\MetadataHandler\\\\MetadataHandler\\:\\:getDefaultSchemaName\\(\\) should return string but returns int\\|string\\|null\\.$#"
-			count: 1
-			path: src/MetadataHandler/MetadataHandler.php
-
-		-
-			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\MetadataHandler\\\\MetadataHandler\\:\\:getMetadatas\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: src/MetadataHandler/MetadataHandler.php
 
 		-
 			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:addField\\(\\)\\.$#"
@@ -166,33 +111,8 @@ parameters:
 			path: src/MetadataHandler/ObjectHandler.php
 
 		-
-			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\MetadataHandler\\\\ObjectHandler\\:\\:getGraphQLFieldsFromProviders\\(\\) should return array\\<string, array\\> but returns array\\<int, Overblog\\\\GraphQLBundle\\\\Configuration\\\\FieldConfiguration\\>\\.$#"
-			count: 1
-			path: src/MetadataHandler/ObjectHandler.php
-
-		-
 			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\MetadataHandler\\\\ObjectHandler\\:\\:guessArgs\\(\\) should return array\\<Overblog\\\\GraphQLBundle\\\\Configuration\\\\ArgumentConfiguration\\> but returns array\\<int, Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\>\\.$#"
 			count: 1
-			path: src/MetadataHandler/ObjectHandler.php
-
-		-
-			message: "#^PHPDoc tag @param references unknown parameter\\: \\$expectedMetadata$#"
-			count: 1
-			path: src/MetadataHandler/ObjectHandler.php
-
-		-
-			message: "#^PHPDoc tag @param references unknown parameter\\: \\$fieldMetadataName$#"
-			count: 1
-			path: src/MetadataHandler/ObjectHandler.php
-
-		-
-			message: "#^PHPDoc tag @return with type array\\<string, array\\> is incompatible with native type Overblog\\\\GraphQLBundle\\\\Configuration\\\\FieldConfiguration\\|null\\.$#"
-			count: 1
-			path: src/MetadataHandler/ObjectHandler.php
-
-		-
-			message: "#^PHPDoc tag @throws with type Overblog\\\\GraphQLConfigurationMetadataBundle\\\\MetadataHandler\\\\AnnotationException is not subtype of Throwable$#"
-			count: 2
 			path: src/MetadataHandler/ObjectHandler.php
 
 		-
@@ -266,49 +186,29 @@ parameters:
 			path: src/MetadataHandler/UnionHandler.php
 
 		-
-			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\ConfigurationMetadataTest\\:\\:getType\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: tests/ConfigurationMetadataTest.php
-
-		-
-			message: "#^Parameter \\#1 \\$expected of method PHPUnit\\\\Framework\\\\Assert\\:\\:assertInstanceOf\\(\\) expects class\\-string\\<object\\>, string given\\.$#"
-			count: 1
-			path: tests/ConfigurationMetadataTest.php
-
-		-
-			message: "#^Call to method disableOriginalConstructor\\(\\) on an unknown class PHPUnit_Framework_MockObject_MockBuilder\\.$#"
-			count: 1
-			path: tests/ExpressionFunction/ArgumentsTest.php
-
-		-
-			message: "#^Call to method disableOriginalConstructor\\(\\) on an unknown class PHPUnit_Framework_MockObject_MockBuilder\\.$#"
-			count: 1
-			path: tests/ExpressionFunction/TestCase.php
-
-		-
-			message: "#^Call to method setMethods\\(\\) on an unknown class PHPUnit_Framework_MockObject_MockBuilder\\.$#"
-			count: 1
-			path: tests/ExpressionFunction/TestCase.php
-
-		-
 			message: "#^Class Symfony\\\\Component\\\\Security\\\\Core\\\\Security not found\\.$#"
 			count: 1
 			path: tests/ExpressionFunction/TestCase.php
 
 		-
 			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\ExpressionFunction\\\\TestCase\\:\\:getCoreSecurityMock\\(\\) has invalid return type Symfony\\\\Component\\\\Security\\\\Core\\\\Security\\.$#"
+			count: 2
+			path: tests/ExpressionFunction/TestCase.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\ExpressionFunction\\\\TestCase\\:\\:getCoreSecurityMock\\(\\) should return PHPUnit\\\\Framework\\\\MockObject\\\\MockObject&Symfony\\\\Component\\\\Security\\\\Core\\\\Security but returns PHPUnit\\\\Framework\\\\MockObject\\\\MockObject\\.$#"
 			count: 1
 			path: tests/ExpressionFunction/TestCase.php
 
 		-
-			message: "#^Parameter \\#1 \\$callback of function call_user_func_array expects callable\\(\\)\\: mixed, array\\{mixed, 'with'\\} given\\.$#"
+			message: "#^PHPDoc tag @return with type Symfony\\\\Component\\\\DependencyInjection\\\\ContainerInterface is not subtype of native type Symfony\\\\Component\\\\DependencyInjection\\\\Container\\.$#"
 			count: 1
 			path: tests/ExpressionFunction/TestCase.php
 
 		-
-			message: "#^Parameter \\#1 \\$objectOrClass of class ReflectionClass constructor expects class\\-string\\<T of object\\>\\|T of object, string given\\.$#"
+			message: "#^Parameter \\#1 \\$stub of method PHPUnit\\\\Framework\\\\MockObject\\\\Builder\\\\InvocationMocker\\<Symfony\\\\Component\\\\Security\\\\Core\\\\Security\\>\\:\\:will\\(\\) expects PHPUnit\\\\Framework\\\\MockObject\\\\Stub\\\\Stub, PHPUnit\\\\Framework\\\\MockObject\\\\Stub\\|PHPUnit\\\\Framework\\\\MockObject\\\\Stub\\\\ReturnStub given\\.$#"
 			count: 1
-			path: tests/TypeGuesser/DoctrineTypeGuesserExtensionTest.php
+			path: tests/ExpressionFunction/TestCase.php
 
 		-
 			message: "#^Parameter \\$targetEntity of attribute class Doctrine\\\\ORM\\\\Mapping\\\\ManyToMany constructor expects class\\-string\\|null, string given\\.$#"
@@ -342,16 +242,6 @@ parameters:
 
 		-
 			message: "#^Access to an undefined property GraphQL\\\\Language\\\\AST\\\\Node\\:\\:\\$value\\.$#"
-			count: 1
-			path: tests/fixtures/Scalar/GalaxyCoordinates.php
-
-		-
-			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Scalar\\\\GalaxyCoordinates\\:\\:parseLiteral\\(\\) should return DateTimeInterface but returns array\\<int, string\\>\\.$#"
-			count: 1
-			path: tests/fixtures/Scalar/GalaxyCoordinates.php
-
-		-
-			message: "#^Method Overblog\\\\GraphQLConfigurationMetadataBundle\\\\Tests\\\\fixtures\\\\Scalar\\\\GalaxyCoordinates\\:\\:parseValue\\(\\) should return DateTimeInterface but returns array\\<int, string\\>\\.$#"
 			count: 1
 			path: tests/fixtures/Scalar/GalaxyCoordinates.php
 

@@ -7,6 +7,7 @@ namespace Overblog\GraphQLConfigurationMetadataBundle\Tests;
 use ArrayIterator;
 use Doctrine\Common\Annotations\AnnotationReader as DoctrineAnnotationReader;
 use Exception;
+use Overblog\GraphQLBundle\Configuration\RootTypeConfiguration;
 use Overblog\GraphQLConfigurationMetadataBundle\ClassesTypesMap;
 use Overblog\GraphQLConfigurationMetadataBundle\ConfigurationMetadataParser;
 use Overblog\GraphQLConfigurationMetadataBundle\Metadata;
@@ -119,7 +120,10 @@ abstract class ConfigurationMetadataTest extends WebTestCase
         return $generator->getConfiguration();
     }
 
-    protected function getType(string $name, string $configurationClass = null)
+    /**
+     * @param class-string|null $configurationClass
+     */
+    protected function getType(string $name, string $configurationClass = null): RootTypeConfiguration
     {
         $type = $this->configuration->getType($name);
         if (!$type) {

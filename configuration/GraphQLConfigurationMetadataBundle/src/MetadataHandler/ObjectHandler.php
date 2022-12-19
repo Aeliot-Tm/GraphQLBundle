@@ -183,7 +183,8 @@ class ObjectHandler extends MetadataHandler
             if (!$isDefaultSchema || $schemaName === $this->getDefaultSchemaName()) {
                 if ($type === $schema['query'] ?? null) {
                     return self::OPERATION_TYPE_QUERY;
-                } elseif ($type === $schema['mutation'] ?? null) {
+                }
+                if ($type === $schema['mutation'] ?? null) {
                     return self::OPERATION_TYPE_MUTATION;
                 }
             }
@@ -195,13 +196,9 @@ class ObjectHandler extends MetadataHandler
     /**
      * Create GraphQL type fields configuration based on metadatas.
      *
-     * @phpstan-param class-string<Metadata\Field> $fieldMetadataName
-     *
      * @param ReflectionProperty[]|ReflectionMethod[] $reflectors
      *
      * @return FieldConfiguration[]
-     *
-     * @throws AnnotationException
      */
     protected function getGraphQLTypeFieldsFromAnnotations(ReflectionClass $reflectionClass, array $reflectors, string $currentValue = 'value'): array
     {
@@ -211,10 +208,6 @@ class ObjectHandler extends MetadataHandler
     /**
      * @phpstan-param ReflectionMethod|ReflectionProperty $reflector
      * @phpstan-param class-string<Metadata\Field> $fieldMetadataName
-     *
-     * @throws AnnotationException
-     *
-     * @return array<string,array>
      */
     protected function getTypeFieldConfigurationFromReflector(ReflectionClass $reflectionClass, Reflector $reflector, string $fieldMetadataName, string $currentValue = 'value'): ?FieldConfiguration
     {
@@ -325,12 +318,10 @@ class ObjectHandler extends MetadataHandler
     }
 
     /**
-     * @phpstan-param class-string<Metadata\Query|Metadata\Mutation> $expectedMetadata
-     *
      * Return fields config from Provider methods.
      * Loop through configured provider and extract fields targeting the targetType.
      *
-     * @return array<string,array>
+     * @return FieldConfiguration[]
      */
     protected function getGraphQLFieldsFromProviders(ReflectionClass $reflectionClass, string $targetType): array
     {
@@ -344,6 +335,7 @@ class ObjectHandler extends MetadataHandler
                     $message .= "\n".sprintf('The provider provides a "%s" but the type expects a "%s"', $provider['operation'], $expectedOperation);
                     throw new MetadataConfigurationException($message);
                 }
+                /** @var class-string<Metadata\Query|Metadata\Mutation> $expectedMetadata */
                 $expectedMetadata = self::OPERATION_TYPE_QUERY === $provider['operation'] ? Metadata\Query::class : Metadata\Mutation::class;
                 $providerField = $this->getTypeFieldConfigurationFromReflector($reflectionClass, $provider['method'], $expectedMetadata, $provider['value']);
                 if (null !== $providerField) {

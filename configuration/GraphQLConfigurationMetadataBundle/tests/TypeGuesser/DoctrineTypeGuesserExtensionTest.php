@@ -46,6 +46,9 @@ class DoctrineTypeGuesserExtensionTest extends WebTestCase
         }
     }
 
+    /**
+     * @param class-string $className
+     */
     protected function testGuessClass(string $className): void
     {
         $classesMap = [

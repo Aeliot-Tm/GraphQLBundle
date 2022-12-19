@@ -4,21 +4,23 @@ declare(strict_types=1);
 
 namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\ExpressionFunction;
 
-use PHPUnit_Framework_MockObject_MockBuilder;
+use PHPUnit\Framework\MockObject\MockBuilder;
+use PHPUnit\Framework\MockObject\MockObject;
 use Symfony\Component\DependencyInjection\Container;
 
 /**
  * Class DIContainerMockTrait.
  *
- * @method PHPUnit_Framework_MockObject_MockBuilder getMockBuilder (string $className)
+ * @method MockBuilder getMockBuilder (string $className)
  */
 trait DIContainerMockTrait
 {
     /**
      * @return \Psr\Container\ContainerInterface&\Symfony\Component\DependencyInjection\ContainerInterface
      */
-    protected function getDIContainerMock(array $services = [], array $parameters = [])
+    protected function getDIContainerMock(array $services = [], array $parameters = []): Container
     {
+        /** @var MockObject & Container $container */
         $container = $this->getMockBuilder(Container::class)
             ->setMethods(['get', 'getParameter', 'has'])
             ->getMock();

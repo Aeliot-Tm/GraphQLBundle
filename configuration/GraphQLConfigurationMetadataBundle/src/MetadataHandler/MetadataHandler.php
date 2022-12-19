@@ -24,6 +24,10 @@ abstract class MetadataHandler
     protected ClassesTypesMap $classesTypesMap;
     protected MetadataReaderInterface $reader;
     protected TypeGuesserInterface $typeGuesser;
+
+    /**
+     * @var array<string,array<string,mixed>>
+     */
     protected array $schemas;
 
     public function __construct(ClassesTypesMap $classesTypesMap, MetadataReaderInterface $reader, TypeGuesserInterface $typeGuesser, array $schemas)
@@ -108,8 +112,10 @@ abstract class MetadataHandler
 
     /**
      * Get metadata for given object
+     *
+     * @return object[]
      */
-    protected function getMetadatas(Reflector $reflector)
+    protected function getMetadatas(Reflector $reflector): array
     {
         return $this->reader->getMetadatas($reflector);
     }

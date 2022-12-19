@@ -78,7 +78,7 @@ class ConfigurationMetadataParser extends ConfigurationFilesParser
                     $resolver = $this->getResolver($classMetadata);
                     if ($resolver) {
                         if ($initializeClassesTypesMap) {
-                            $resolver->setClassesMap($reflectionClass, $classMetadata, $this->classesTypesMap);
+                            $resolver->setClassesMap($reflectionClass, $classMetadata);
                         } else {
                             $resolver->addConfiguration($this->configuration, $reflectionClass, $classMetadata);
                         }
@@ -104,8 +104,14 @@ class ConfigurationMetadataParser extends ConfigurationFilesParser
     protected function getFileClassReflection(SplFileInfo $file): ReflectionClass
     {
         try {
+            /** @var class-string $className */
             $className = $file->getBasename('.php');
-            if (preg_match('#namespace (.+);#', file_get_contents($file->getRealPath()), $matches)) {
+            $contents = file_get_contents($file->getRealPath());
+            if (false === $contents) {
+                throw new RuntimeException(sprintf('File %s is cannot be read', $file->getRealPath()));
+            }
+            if (preg_match('#namespace (.+);#', $contents, $matches)) {
+                /** @var class-string $className */
                 $className = trim($matches[1]).'\\'.$className;
             }
 
@@ -115,7 +121,10 @@ class ConfigurationMetadataParser extends ConfigurationFilesParser
         }
     }
 
-    protected function getMetadatas(Reflector $reflector)
+    /**
+     * @return object[]
+     */
+    protected function getMetadatas(Reflector $reflector): array
     {
         return $this->metadataReader->getMetadatas($reflector);
     }

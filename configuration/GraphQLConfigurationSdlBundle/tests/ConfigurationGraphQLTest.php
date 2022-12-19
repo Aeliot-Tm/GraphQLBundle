@@ -74,7 +74,7 @@ class ConfigurationGraphQLTest extends WebTestCase
     public function testCustomScalarTypeDefaultFieldValue(): void
     {
         $this->expectException(Exception::class);
-        $this->expectExceptionMessage('Config entry must be override with ResolverMap to be used.');
+        $this->expectExceptionMessage('Config entry must be overridden with ResolverMap to be used.');
         CustomScalarNode::mustOverrideConfig();
     }
 }

@@ -29,6 +29,6 @@ class CustomScalarNode implements NodeInterface
 
     public static function mustOverrideConfig(): void
     {
-        throw new RuntimeException('Config entry must be override with ResolverMap to be used.');
+        throw new RuntimeException('Config entry must be overridden with ResolverMap to be used.');
     }
 }

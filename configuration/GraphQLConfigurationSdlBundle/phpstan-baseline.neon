@@ -1,2 +1,136 @@
 parameters:
 	ignoreErrors:
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setParseLiteral\\(\\)\\.$#"
+			count: 1
+			path: src/ASTConverter/CustomScalarNode.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setParseValue\\(\\)\\.$#"
+			count: 1
+			path: src/ASTConverter/CustomScalarNode.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setSerialize\\(\\)\\.$#"
+			count: 1
+			path: src/ASTConverter/CustomScalarNode.php
+
+		-
+			message: "#^Access to an undefined property GraphQL\\\\Language\\\\AST\\\\Node\\:\\:\\$directives\\.$#"
+			count: 1
+			path: src/ASTConverter/Deprecated.php
+
+		-
+			message: "#^Access to an undefined property GraphQL\\\\Language\\\\AST\\\\Node\\:\\:\\$description\\.$#"
+			count: 1
+			path: src/ASTConverter/Description.php
+
+		-
+			message: "#^Access to an undefined property GraphQL\\\\Language\\\\AST\\\\Node\\:\\:\\$values\\.$#"
+			count: 1
+			path: src/ASTConverter/EnumNode.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:addValue\\(\\)\\.$#"
+			count: 1
+			path: src/ASTConverter/EnumNode.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setDeprecationReason\\(\\)\\.$#"
+			count: 1
+			path: src/ASTConverter/EnumNode.php
+
+		-
+			message: "#^Access to an undefined property GraphQL\\\\Language\\\\AST\\\\Node\\:\\:\\$directives\\.$#"
+			count: 1
+			path: src/ASTConverter/Extensions.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:addArgument\\(\\)\\.$#"
+			count: 1
+			path: src/ASTConverter/Fields.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setDefaultValue\\(\\)\\.$#"
+			count: 1
+			path: src/ASTConverter/Fields.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setDeprecationReason\\(\\)\\.$#"
+			count: 1
+			path: src/ASTConverter/Fields.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of static method Overblog\\\\GraphQLConfigurationSdlBundle\\\\ASTConverter\\\\Fields\\:\\:get\\(\\) expects GraphQL\\\\Language\\\\AST\\\\Node, object given\\.$#"
+			count: 1
+			path: src/ASTConverter/Fields.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\InputConfiguration\\|Overblog\\\\GraphQLBundle\\\\Configuration\\\\InterfaceConfiguration\\|Overblog\\\\GraphQLBundle\\\\Configuration\\\\ObjectConfiguration\\:\\:setInterfaces\\(\\)\\.$#"
+			count: 1
+			path: src/ASTConverter/ObjectNode.php
+
+		-
+			message: "#^Variable \\$configuration might not be defined\\.$#"
+			count: 5
+			path: src/ASTConverter/ObjectNode.php
+
+		-
+			message: "#^Access to an undefined property GraphQL\\\\Language\\\\AST\\\\Node\\:\\:\\$type\\.$#"
+			count: 1
+			path: src/ASTConverter/Type.php
+
+		-
+			message: "#^Access to an undefined property GraphQL\\\\Language\\\\AST\\\\TypeNode\\:\\:\\$kind\\.$#"
+			count: 1
+			path: src/ASTConverter/Type.php
+
+		-
+			message: "#^Access to an undefined property GraphQL\\\\Language\\\\AST\\\\TypeNode\\:\\:\\$name\\.$#"
+			count: 1
+			path: src/ASTConverter/Type.php
+
+		-
+			message: "#^Access to an undefined property GraphQL\\\\Language\\\\AST\\\\TypeNode\\:\\:\\$type\\.$#"
+			count: 2
+			path: src/ASTConverter/Type.php
+
+		-
+			message: "#^Call to an undefined method Overblog\\\\GraphQLBundle\\\\Configuration\\\\TypeConfiguration\\:\\:setTypes\\(\\)\\.$#"
+			count: 1
+			path: src/ASTConverter/UnionNode.php
+
+		-
+			message: "#^Argument of an invalid type array\\|bool\\|float\\|int\\|string supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/DependencyInjection/OverblogGraphQLConfigurationSdlExtension.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationSdlBundle\\\\DependencyInjection\\\\OverblogGraphQLConfigurationSdlExtension\\:\\:resolveBundleDirectory\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/DependencyInjection/OverblogGraphQLConfigurationSdlExtension.php
+
+		-
+			message: "#^Parameter \\#1 \\$objectOrClass of class ReflectionClass constructor expects class\\-string\\<T of object\\>\\|T of object, string given\\.$#"
+			count: 1
+			path: src/DependencyInjection/OverblogGraphQLConfigurationSdlExtension.php
+
+		-
+			message: "#^Parameter \\#1 \\$path of function dirname expects string, string\\|false given\\.$#"
+			count: 1
+			path: src/DependencyInjection/OverblogGraphQLConfigurationSdlExtension.php
+
+		-
+			message: "#^Parameter \\#2 \\.\\.\\.\\$values of function sprintf expects bool\\|float\\|int\\|string\\|null, array\\|bool\\|float\\|int\\|string\\|null given\\.$#"
+			count: 1
+			path: src/DependencyInjection/OverblogGraphQLConfigurationSdlExtension.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationSdlBundle\\\\Tests\\\\ConfigurationGraphQLTest\\:\\:getConfiguration\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/ConfigurationGraphQLTest.php
+
+		-
+			message: "#^Method Overblog\\\\GraphQLConfigurationSdlBundle\\\\Tests\\\\ConfigurationGraphQLTest\\:\\:parseFile\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/ConfigurationGraphQLTest.php

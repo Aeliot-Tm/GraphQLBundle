@@ -80,7 +80,7 @@ class ConfigurationSdlParser extends ConfigurationFilesParser
             /**
              * @var ObjectTypeDefinitionNode|InputObjectTypeDefinitionNode|EnumTypeDefinitionNode $typeDef
              */
-            if (isset($typeDef->kind) && in_array($typeDef->kind, array_keys(self::DEFINITION_TYPE_MAPPING))) {
+            if (isset($typeDef->kind) && array_key_exists($typeDef->kind, self::DEFINITION_TYPE_MAPPING)) {
                 /**
                  * @var class-string $class
                  */

@@ -6,6 +6,7 @@ namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\ExpressionFunction;
 
 use GraphQL\Type\Definition\ResolveInfo;
 use GraphQL\Type\Schema;
+use Overblog\GraphQLBundle\Generator\TypeGenerator;
 use Overblog\GraphQLConfigurationMetadataBundle\ClassesTypesMap;
 use Overblog\GraphQLConfigurationMetadataBundle\ExpressionFunction\Arguments;
 use Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\ArgumentsTransformerTest;
@@ -13,12 +14,10 @@ use Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\Enum1;
 use Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\InputType1;
 use Overblog\GraphQLConfigurationMetadataBundle\Tests\Transformer\InputType2;
 use Overblog\GraphQLConfigurationMetadataBundle\Transformer\ArgumentsTransformer;
-use Overblog\GraphQLBundle\Generator\TypeGenerator;
 use PHPUnit\Framework\MockObject\MockObject;
 use Symfony\Component\Validator\ConstraintViolationList;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Validator\RecursiveValidator;
-
 use function class_exists;
 use function count;
 

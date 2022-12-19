@@ -12,7 +12,6 @@ use ReflectionClass;
 use ReflectionMethod;
 use ReflectionProperty;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-
 use function sprintf;
 
 final class DocBlockTypeGuesserExtensionTest extends WebTestCase

@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Scalar;
 
-use DateTimeInterface;
 use GraphQL\Language\AST\Node;
 use Overblog\GraphQLConfigurationMetadataBundle\Metadata as GQL;
-
 use function explode;
 use function implode;
 

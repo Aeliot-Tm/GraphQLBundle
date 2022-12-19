@@ -39,10 +39,10 @@ class Field extends Metadata
     public ?string $complexity;
 
     /**
-     * @param string|null $name         The GraphQL name of the field
-     * @param string|null $type         The GraphQL type of the field
-     * @param string|null $resolve      A expression resolver to resolve the field value
-     * @param string|null $complexity   A complexity expression
+     * @param string|null $name       The GraphQL name of the field
+     * @param string|null $type       The GraphQL type of the field
+     * @param string|null $resolve    A expression resolver to resolve the field value
+     * @param string|null $complexity A complexity expression
      */
     public function __construct(
         ?string $name = null,

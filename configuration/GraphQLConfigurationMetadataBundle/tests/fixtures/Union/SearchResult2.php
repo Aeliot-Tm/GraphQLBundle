@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\fixtures\Union;
 
 use GraphQL\Type\Definition\Type;
-use Overblog\GraphQLConfigurationMetadataBundle\Metadata as GQL;
 use Overblog\GraphQLBundle\Resolver\TypeResolver;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata as GQL;
 
 /**
  * @GQL\Union(types={"Hero", "Droid", "Sith"})

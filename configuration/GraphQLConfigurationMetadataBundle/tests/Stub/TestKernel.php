@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-
 namespace Overblog\GraphQLConfigurationMetadataBundle\Tests\Stub;
 
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\HttpKernel\Kernel as SymfonyKernel;
+use function dirname;
 
 final class TestKernel extends SymfonyKernel
 {
@@ -14,7 +14,7 @@ final class TestKernel extends SymfonyKernel
 
     public function getProjectDir(): string
     {
-        return \dirname(__DIR__);
+        return dirname(__DIR__);
     }
 
     /**
@@ -22,7 +22,7 @@ final class TestKernel extends SymfonyKernel
      */
     public function getCacheDir(): string
     {
-        return \dirname($this->getProjectDir()) . '/var/cache/' . $this->environment;
+        return dirname($this->getProjectDir()).'/var/cache/'.$this->environment;
     }
 
     /**
@@ -30,11 +30,11 @@ final class TestKernel extends SymfonyKernel
      */
     public function getLogDir(): string
     {
-        return \dirname($this->getProjectDir()) . '/var/log';
+        return dirname($this->getProjectDir()).'/var/log';
     }
 
     protected function getContainerClass(): string
     {
-        return parent::getContainerClass() . 'Tmp';
+        return parent::getContainerClass().'Tmp';
     }
 }

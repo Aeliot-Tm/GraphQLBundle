@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler;
 
-use Overblog\GraphQLConfigurationMetadataBundle\Metadata;
-use Overblog\GraphQLConfigurationMetadataBundle\MetadataConfigurationException;
-use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\TypeGuessingException;
 use Overblog\GraphQLBundle\Configuration\Configuration;
 use Overblog\GraphQLBundle\Configuration\InputConfiguration;
 use Overblog\GraphQLBundle\Configuration\InputFieldConfiguration;
 use Overblog\GraphQLBundle\Configuration\TypeConfiguration;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata;
+use Overblog\GraphQLConfigurationMetadataBundle\MetadataConfigurationException;
+use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\TypeGuessingException;
 use ReflectionClass;
 use ReflectionProperty;
 

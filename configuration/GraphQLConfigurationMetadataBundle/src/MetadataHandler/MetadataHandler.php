@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler;
 
 use Exception;
+use Overblog\GraphQLBundle\Configuration\Configuration;
+use Overblog\GraphQLBundle\Configuration\ExtensionConfiguration;
+use Overblog\GraphQLBundle\Configuration\TypeConfiguration;
 use Overblog\GraphQLConfigurationMetadataBundle\ClassesTypesMap;
 use Overblog\GraphQLConfigurationMetadataBundle\Metadata;
 use Overblog\GraphQLConfigurationMetadataBundle\Reader\MetadataReaderInterface;
 use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\TypeGuesserInterface;
-use Overblog\GraphQLBundle\Configuration\Configuration;
-use Overblog\GraphQLBundle\Configuration\ExtensionConfiguration;
-use Overblog\GraphQLBundle\Configuration\TypeConfiguration;
 use ReflectionClass;
 use ReflectionClassConstant;
 use ReflectionMethod;
@@ -151,6 +151,7 @@ abstract class MetadataHandler
      * @phpstan-param class-string<T>|class-string<T>[] $metadataClasses
      *
      * @phpstan-return  T[]
+     *
      * @return object[]
      */
     protected function getMetadataMatching(array $metadatas, $metadataClasses): array

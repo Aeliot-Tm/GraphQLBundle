@@ -5,14 +5,15 @@ declare(strict_types=1);
 namespace Overblog\GraphQLConfigurationMetadataBundle;
 
 use Doctrine\Common\Annotations\Reader;
-use Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler\MetadataHandler;
-use Overblog\GraphQLConfigurationMetadataBundle\Reader\MetadataReaderInterface;
 use Overblog\GraphQLBundle\Configuration\Configuration;
 use Overblog\GraphQLBundle\ConfigurationProvider\ConfigurationFilesParser;
+use Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler\MetadataHandler;
+use Overblog\GraphQLConfigurationMetadataBundle\Reader\MetadataReaderInterface;
 use ReflectionClass;
 use Reflector;
 use RuntimeException;
 use SplFileInfo;
+use Traversable;
 use function sprintf;
 
 class ConfigurationMetadataParser extends ConfigurationFilesParser
@@ -33,7 +34,7 @@ class ConfigurationMetadataParser extends ConfigurationFilesParser
         $this->metadataReader = $metadataReader;
         $this->classesTypesMap = $classesTypesMap;
 
-        $this->resolvers = $resolvers instanceof \Traversable ? iterator_to_array($resolvers) : $resolvers;
+        $this->resolvers = $resolvers instanceof Traversable ? iterator_to_array($resolvers) : $resolvers;
     }
 
     public function getSupportedExtensions(): array

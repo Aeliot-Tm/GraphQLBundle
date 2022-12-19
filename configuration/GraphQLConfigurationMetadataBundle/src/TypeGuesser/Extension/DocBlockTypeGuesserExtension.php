@@ -20,7 +20,6 @@ use ReflectionClass;
 use ReflectionMethod;
 use ReflectionProperty;
 use Reflector;
-
 use function sprintf;
 
 final class DocBlockTypeGuesserExtension extends PhpTypeGuesserExtension

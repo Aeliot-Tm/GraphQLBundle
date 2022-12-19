@@ -16,7 +16,6 @@ use Symfony\Component\PropertyAccess\PropertyAccess;
 use Symfony\Component\PropertyAccess\PropertyAccessor;
 use Symfony\Component\Validator\ConstraintViolationList;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
-
 use function array_map;
 use function count;
 use function is_array;
@@ -33,6 +32,7 @@ final class ArgumentsTransformer
 
     /**
      * FIXME: parameters with default value MUST be after parameters without default values.
+     *
      * @see https://www.php.net/manual/en/functions.arguments.php#functions.arguments.default Example #7 Incorrect usage of default function arguments
      */
     public function __construct(ValidatorInterface $validator = null, ClassesTypesMap $classesTypesMap)

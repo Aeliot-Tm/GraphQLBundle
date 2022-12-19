@@ -14,20 +14,17 @@ use GraphQL\Type\Definition\Type;
 use GraphQL\Type\Schema;
 // TODO check merge conflict solving
 use Overblog\GraphQLBundle\Definition\Type\PhpEnumType;
+use Overblog\GraphQLBundle\Tests\Functional\EnumPhp\EnumPhp;
 use Overblog\GraphQLConfigurationMetadataBundle\ClassesTypesMap;
 use Overblog\GraphQLConfigurationMetadataBundle\Transformer\ArgumentsTransformer;
 use Overblog\GraphQLConfigurationMetadataBundle\Transformer\InvalidArgumentError;
 use Overblog\GraphQLConfigurationMetadataBundle\Transformer\InvalidArgumentsError;
-use Overblog\GraphQLBundle\Tests\Functional\EnumPhp\EnumPhp;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Validator\ConstraintViolation;
 use Symfony\Component\Validator\ConstraintViolationList;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Validator\RecursiveValidator;
-
 use function class_exists;
-use function count;
-use function is_array;
 
 final class ArgumentsTransformerTest extends TestCase
 {

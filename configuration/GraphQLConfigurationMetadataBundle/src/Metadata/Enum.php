@@ -22,7 +22,7 @@ final class Enum extends Metadata
     public ?string $name;
 
     /**
-     * @param string|null      $name   The GraphQL name of the enum
+     * @param string|null $name The GraphQL name of the enum
      */
     public function __construct(?string $name = null)
     {

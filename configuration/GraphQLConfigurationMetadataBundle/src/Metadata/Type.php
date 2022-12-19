@@ -44,11 +44,11 @@ class Type extends Metadata
     public ?string $isTypeOf;
 
     /**
-     * @param string|null          $name         The GraphQL name of the type
-     * @param string[]             $interfaces   List of GraphQL interfaces implemented by the type
-     * @param bool                 $isRelay      Set to true to make the type compatible with relay
-     * @param string|null          $resolveField An expression to resolve the field value
-     * @param string|null          $isTypeOf     An expression to resolve if the field is of given type
+     * @param string|null $name         The GraphQL name of the type
+     * @param string[]    $interfaces   List of GraphQL interfaces implemented by the type
+     * @param bool        $isRelay      Set to true to make the type compatible with relay
+     * @param string|null $resolveField An expression to resolve the field value
+     * @param string|null $isTypeOf     An expression to resolve if the field is of given type
      */
     public function __construct(
         string $name = null,

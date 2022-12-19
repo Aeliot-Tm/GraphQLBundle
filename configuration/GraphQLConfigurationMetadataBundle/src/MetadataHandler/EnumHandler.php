@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler;
 
-use Overblog\GraphQLConfigurationMetadataBundle\Metadata;
-use Overblog\GraphQLConfigurationMetadataBundle\Metadata\Enum;
+use InvalidArgumentException;
 use Overblog\GraphQLBundle\Configuration\Configuration;
 use Overblog\GraphQLBundle\Configuration\EnumConfiguration;
 use Overblog\GraphQLBundle\Configuration\EnumValueConfiguration;
 use Overblog\GraphQLBundle\Configuration\TypeConfiguration;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata\Enum;
 use ReflectionClass;
 use ReflectionClassConstant;
 
@@ -33,7 +34,7 @@ class EnumHandler extends MetadataHandler
     public function addConfiguration(Configuration $configuration, ReflectionClass $reflectionClass, Metadata\Metadata $enumMetadata): ?TypeConfiguration
     {
         if (!$enumMetadata instanceof Enum) {
-            throw new \InvalidArgumentException(sprintf('Metadata arguments MUST be an instance of %s', Enum::class));
+            throw new InvalidArgumentException(sprintf('Metadata arguments MUST be an instance of %s', Enum::class));
         }
 
         $gqlName = $this->getEnumName($reflectionClass, $enumMetadata);

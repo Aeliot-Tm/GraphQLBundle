@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler;
 
-use Overblog\GraphQLConfigurationMetadataBundle\Metadata;
-use Overblog\GraphQLConfigurationMetadataBundle\MetadataConfigurationException;
 use Overblog\GraphQLBundle\Configuration\Configuration;
 use Overblog\GraphQLBundle\Configuration\TypeConfiguration;
 use Overblog\GraphQLBundle\Configuration\UnionConfiguration;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata;
+use Overblog\GraphQLConfigurationMetadataBundle\MetadataConfigurationException;
 use ReflectionClass;
 
 class UnionHandler extends MetadataHandler

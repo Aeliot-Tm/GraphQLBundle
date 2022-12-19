@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler;
 
-use Overblog\GraphQLConfigurationMetadataBundle\Metadata;
-use Overblog\GraphQLConfigurationMetadataBundle\MetadataConfigurationException;
-use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\TypeGuessingException;
 use Overblog\GraphQLBundle\Configuration\ArgumentConfiguration;
 use Overblog\GraphQLBundle\Configuration\Configuration;
 use Overblog\GraphQLBundle\Configuration\ExtensionConfiguration;
@@ -14,6 +11,9 @@ use Overblog\GraphQLBundle\Configuration\FieldConfiguration;
 use Overblog\GraphQLBundle\Configuration\ObjectConfiguration;
 use Overblog\GraphQLBundle\Configuration\TypeConfiguration;
 use Overblog\GraphQLBundle\Extension\Builder\BuilderExtension;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata;
+use Overblog\GraphQLConfigurationMetadataBundle\MetadataConfigurationException;
+use Overblog\GraphQLConfigurationMetadataBundle\TypeGuesser\TypeGuessingException;
 use ReflectionClass;
 use ReflectionMethod;
 use ReflectionProperty;

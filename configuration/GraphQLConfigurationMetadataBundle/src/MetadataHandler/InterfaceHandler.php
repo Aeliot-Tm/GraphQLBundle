@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Overblog\GraphQLConfigurationMetadataBundle\MetadataHandler;
 
-use Overblog\GraphQLConfigurationMetadataBundle\Metadata;
 use Overblog\GraphQLBundle\Configuration\Configuration;
 use Overblog\GraphQLBundle\Configuration\InterfaceConfiguration;
 use Overblog\GraphQLBundle\Configuration\TypeConfiguration;
+use Overblog\GraphQLConfigurationMetadataBundle\Metadata;
 use ReflectionClass;
 
 class InterfaceHandler extends ObjectHandler

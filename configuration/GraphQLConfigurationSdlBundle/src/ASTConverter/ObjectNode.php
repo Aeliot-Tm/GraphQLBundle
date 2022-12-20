@@ -5,51 +5,48 @@ declare(strict_types=1);
 namespace Overblog\GraphQLConfigurationSdlBundle\ASTConverter;
 
 use GraphQL\Language\AST\Node;
-use LogicException;
-use Overblog\GraphQLBundle\Configuration\InputConfiguration;
-use Overblog\GraphQLBundle\Configuration\InterfaceConfiguration;
+use Overblog\GraphQLBundle\Configuration\FieldsOwner;
+use Overblog\GraphQLBundle\Configuration\Interfaced;
 use Overblog\GraphQLBundle\Configuration\ObjectConfiguration;
+use Overblog\GraphQLBundle\Configuration\RootTypeConfiguration;
 use Overblog\GraphQLBundle\Configuration\TypeConfiguration;
 
 class ObjectNode implements NodeInterface
 {
-    protected const TYPENAME = 'object';
-
     public static function toConfiguration(string $name, Node $node): TypeConfiguration
     {
-        $fieldsType = Fields::TYPE_FIELDS;
-        switch (static::TYPENAME) {
-            case 'object':
-                $configuration = ObjectConfiguration::create($name);
-                break;
-            case 'interface':
-                $configuration = InterfaceConfiguration::create($name);
-                break;
-            case 'input-object':
-                $configuration = InputConfiguration::create($name);
-                $fieldsType = Fields::TYPE_INPUT_FIELDS;
-                break;
-            default:
-                // TODO: implement protected getters of $configuration & $fieldsType
-                //       instead of rigid switch
-                throw new LogicException(sprintf('Invalid type: %s', static::TYPENAME));
-        }
-
+        $configuration = static::createConfiguration($name);
         $configuration->setDescription(Description::get($node));
         $configuration->addExtensions(Extensions::get($node));
 
-        $configuration->addFields(Fields::get($node, $fieldsType));
+        if ($configuration instanceof FieldsOwner) {
+            $configuration->addFields(Fields::get($node, static::getFieldsType()));
+        }
 
-        if (!empty($node->interfaces)) {
-            $interfaces = [];
-            foreach ($node->interfaces as $interface) {
-                $interfaces[] = Type::astTypeNodeToString($interface);
-            }
-            if (count($interfaces) > 0) {
-                $configuration->setInterfaces($interfaces);
-            }
+        if ($configuration instanceof Interfaced) {
+            $configuration->setInterfaces(static::getInterfaces($node));
         }
 
         return $configuration;
+    }
+
+    protected static function createConfiguration(string $name): RootTypeConfiguration
+    {
+        return ObjectConfiguration::create($name);
+    }
+
+    protected static function getFieldsType(): string
+    {
+        return Fields::TYPE_FIELDS;
+    }
+
+    protected static function getInterfaces(Node $node): array
+    {
+        $interfaces = [];
+        foreach ($node->interfaces ?? [] as $interface) {
+            $interfaces[] = Type::astTypeNodeToString($interface);
+        }
+
+        return $interfaces;
     }
 }

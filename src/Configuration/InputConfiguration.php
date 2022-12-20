@@ -6,7 +6,10 @@ namespace Overblog\GraphQLBundle\Configuration;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
-class InputConfiguration extends RootTypeConfiguration
+/**
+ * @implements FieldsOwner<InputFieldConfiguration>
+ */
+class InputConfiguration extends RootTypeConfiguration implements FieldsOwner
 {
     /**
      * @Assert\Valid

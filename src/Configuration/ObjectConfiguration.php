@@ -6,7 +6,10 @@ namespace Overblog\GraphQLBundle\Configuration;
 
 use Overblog\GraphQLBundle\Configuration\Traits\FieldsTrait;
 
-class ObjectConfiguration extends RootTypeConfiguration
+/**
+ * @implements FieldsOwner<FieldConfiguration>
+ */
+class ObjectConfiguration extends RootTypeConfiguration implements FieldsOwner, Interfaced
 {
     use FieldsTrait;
 

@@ -7,7 +7,10 @@ namespace Overblog\GraphQLBundle\Configuration;
 use Overblog\GraphQLBundle\Configuration\Traits\FieldsTrait;
 use Overblog\GraphQLBundle\Configuration\Traits\ResolveTypeTrait;
 
-class InterfaceConfiguration extends RootTypeConfiguration
+/**
+ * @implements FieldsOwner<FieldConfiguration>
+ */
+class InterfaceConfiguration extends RootTypeConfiguration implements FieldsOwner
 {
     use ResolveTypeTrait;
     use FieldsTrait;
